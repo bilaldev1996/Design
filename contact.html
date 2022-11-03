@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornershops Records</title>
+    <link rel="shortcut icon" href="./img/icono.png">
+</head>
+<body>
+    <div class="header">
+        <header>
+            <h1>Cornershops Records</h1>
+            <img src="./img/logotipo.png" alt="logo">
+        </header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="sell.html">Sell</a>
+            <a href="events.html">Events</a>
+            <a href="#">Contact</a>
+        </nav>
+        <button>Login</button>
+    </div>
+    <hr>
+    <main>
+        <h1>Contact Us</h1>
+        <p>We are looking forward to helping you!
+
+            Cornershoprecords.com is the website for vinyl record lovers and it would be nothing without you.
+            We would like to know what are your favorite vinyl records, and which ones we should add to our list as must-haves. We look forward to receiving your message!
+        </p>
+        <form action="contact.php" method="post">
+            <fieldset>
+                <legend>Formulario Contacto</legend>
+                <p>
+                    <label for="nombre">FullName:</label>
+                    <input type="text" name="nombre" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" required>
+                </p>
+                <p>
+                    <label for="asunto">Affair:</label>
+                    <input type="text" name="asunto" required>
+                </p>
+                <p>
+                    <label for="mensaje">Message:</label><br/>
+                    <textarea rows="10" cols="30" name="mensaje" required></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Send a Message" name="enviar">
+                </p>
+            </fieldset>
+        </form>
+        <h2>Contact Info</h2>
+        <div>
+            <h2>Our Shop</h2>
+            <p>
+                <strong>Address:</strong> Downtown Pasadena, 
+                California
+            </p>
+        </div>
+        <div>
+            <h2>Open Shop Hours</h2>
+            <p>Monday to Friday
+                Mornings from11:00 to 13:30
+                Afternoons from 17:00 to 20:00</p>
+        </div>
+        <div class="subscribe">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Subscribe to our newsletter and receive exclusive offers and news about our products.</p>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Form Subscription</legend>
+                    <p>
+                        <input type="text" name="nombre" required placeholder="your email...">
+                    </p>
+                    <p>
+                        <input type="submit" value="Subscribe" name="enviar">
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <hr>
+    <!-- footer page -->
+    <footer>
+        <div class="logo">
+            <img src="./img/logotipo.png" alt="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Legal Warning</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <p>© 2021 Cornershops Records</p>
+        <!-- social media -->
+        <div class="social-media">
+            <a href="https://www.facebook.com/"><img src="./img/facebook.png" alt="facebook" width="25" height="25"></a>
+            <a href="https://www.instagram.com/"><img src="./img/instagram.png" alt="instagram" width="25" height="25"></a>
+            <a href="https://twitter.com/"><img src="./img/gorjeo.png" alt="twitter" width="25" height="25"></a>
+    </footer>
+</body>
+</html>
