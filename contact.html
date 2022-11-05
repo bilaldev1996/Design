@@ -34,19 +34,20 @@
                 <legend>Formulario Contacto</legend>
                 <p>
                     <label for="nombre">FullName:</label>
-                    <input type="text" name="nombre" required>
+                    <input type="text" name="nombre" pattern="[A-Za-z ]+" required>
                 </p>
                 <p>
                     <label for="email">Email:</label>
-                    <input type="email" name="email" required>
+                    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                 </p>
                 <p>
                     <label for="asunto">Affair:</label>
-                    <input type="text" name="asunto" required>
+                    <input type="text" name="asunto"
+                    pattern="[A-Za-z ]+" required> 
                 </p>
                 <p>
                     <label for="mensaje">Message:</label><br/>
-                    <textarea rows="10" cols="30" name="mensaje" required></textarea>
+                    <textarea rows="10" cols="30" name="mensaje" pattern="[A-Za-z ]+" required></textarea> 
                 </p>
                 <p>
                     <input type="submit" value="Send a Message" name="enviar">
