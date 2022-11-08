@@ -32,26 +32,40 @@
         <form action="contact.php" method="post">
             <fieldset>
                 <legend>Formulario Contacto</legend>
-                <p>
-                    <label for="nombre">FullName:</label>
-                    <input type="text" name="nombre" pattern="[A-Za-z ]+" required>
-                </p>
-                <p>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                </p>
-                <p>
-                    <label for="asunto">Affair:</label>
-                    <input type="text" name="asunto"
-                    pattern="[A-Za-z ]+" required> 
-                </p>
-                <p>
-                    <label for="mensaje">Message:</label><br/>
-                    <textarea rows="10" cols="30" name="mensaje" pattern="[A-Za-z ]+" required></textarea> 
-                </p>
-                <p>
-                    <input type="submit" value="Send a Message" name="enviar">
-                </p>
+                <fieldset>
+                    <legend>My Personal Information</legend>
+                    <p>
+                        <label for="nombre">Name:</label>
+                        <input type="text" name="nombre" pattern="[A-Za-z ]+" required placeholder="Name*">
+                        <label for="lastname">LastName:</label>
+                        <input type="text" name="lastname" pattern="[A-Za-z ]+" required placeholder=" Lastname*">
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="confirm E-mail*">
+                        <label for="confirmEmail">Confirm Email</label>
+                        <input type="email" name="confirmEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="E.mail*">
+                    </p>
+                    <p>
+                        <label for="phone">Phone:</label>
+                        <input type="tel" name="phone" pattern="[0-9]{9}" required placeholder="Phone*" size="10">
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>My Query</legend>
+                    <p>
+                        <label for="asunto">Affair:</label>
+                        <input type="text" name="asunto"
+                        pattern="[A-Za-z ]+" required> 
+                    </p>
+                    <p>
+                        <label for="mensaje">Message:</label><br/>
+                        <textarea rows="10" cols="30" name="mensaje" pattern="[A-Za-z ]+" required placeholder="..."></textarea> 
+                    </p>
+                    <p>
+                        <input type="submit" value="Send a Message" name="submit">
+                    </p>
+                </fieldset>
             </fieldset>
         </form>
         <h2>Contact Info</h2>
@@ -75,7 +89,7 @@
                 <fieldset>
                     <legend>Form Subscription</legend>
                     <p>
-                        <input type="text" name="nombre" required placeholder="your email...">
+                        <input type="text" name="nombre" required placeholder="Email*">
                     </p>
                     <p>
                         <input type="submit" value="Subscribe" name="enviar">
