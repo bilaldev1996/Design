@@ -42,12 +42,56 @@
                     </p>
                     <p>
                         <label for="email">Email:</label>
-                        <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="confirm E-mail*">
+                        <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="confirm E-mail*">
                         <label for="confirmEmail">Confirm Email</label>
-                        <input type="email" name="confirmEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="E.mail*">
+                        <input type="email" name="confirmEmail" id="confirmEmail"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="E.mail*">
+                        <script>
+                            /* Check if the emails are the same */
+                            let email = document.getElementById("email")
+                            , confirm_email = document.getElementById("confirmEmail");
+                            function validateEmail(){
+                                if(email.value != confirm_email.value) {
+                                    confirm_email.setCustomValidity("Emails Don't Match");
+                                } else {
+                                    confirm_email.setCustomValidity('');
+                                }
+                            }
+                            email.onchange = validateEmail;
+                            confirm_email.onkeyup = validateEmail;
+                        </script>
                     </p>
                     <p>
                         <label for="phone">Phone:</label>
+                        <select name="prefix">
+                            <!-- prefijos paises europeos -->
+                            <option value="34">+34</option><!-- España -->
+                            <option value="39">+39</option><!-- Italia -->
+                            <option value="44">+44</option><!-- Reino Unido -->
+                            <option value="49">+49</option><!-- Alemania -->
+                            <option value="33">+33</option><!-- Francia -->
+                            <option value="32">+32</option><!-- Bélgica -->
+                            <option value="31">+31</option><!-- Holanda -->
+                            <option value="41">+41</option><!-- Suiza -->
+                            <option value="45">+45</option><!-- Dinamarca -->
+                            <option value="46">+46</option><!-- Suecia -->
+                            <option value="47">+47</option><!-- Noruega -->
+                            <option value="48">+48</option><!-- Polonia -->
+                            <option value="43">+43</option><!-- Austria -->
+                            <option value="420">+420</option><!-- República Checa -->
+                            <option value="421">+421</option><!-- Eslovaquia -->
+                            <option value="370">+370</option><!-- Lituania -->
+                            <option value="371">+371</option><!-- Letonia -->
+                            <option value="372">+372</option><!-- Estonia -->
+                            <option value="373">+373</option><!-- Moldavia -->
+                            <option value="374">+374</option><!-- Armenia -->
+                            <option value="375">+375</option><!-- Bielorrusia -->
+                            <option value="376">+376</option><!-- Andorra -->
+                            <option value="377">+377</option><!-- Mónaco -->
+                            <option value="378">+378</option><!-- San Marino -->
+                            <option value="380">+380</option><!-- Ucrania -->
+                            <option value="381">+381</option><!-- Serbia -->
+                        </select>
                         <input type="tel" name="phone" pattern="[0-9]{9}" required placeholder="Phone*" size="10">
                     </p>
                 </fieldset>

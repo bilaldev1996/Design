@@ -8,13 +8,7 @@
         $phone = $_POST['phone'];
         $affair = $_POST['asunto'];
         $message = $_POST['mensaje'];
-
-        if($email !== $confirmEmail) {
-            echo "<script>
-                alert('The emails do not match');
-                window.history.go(-1);
-            </script>";
-        }
+        $prefix = $_POST['prefix'];
 
 
         echo "<h2>Your form has been submitted successfully!</h2>";
@@ -25,7 +19,7 @@
         echo "<tr><td>Last Name:</td><td>$lastname</td></tr>";
         echo "<tr><td>Email:</td><td>$email</td></tr>";
         echo "<tr><td>Confirm Email:</td><td>$confirmEmail</td></tr>";
-        echo "<tr><td>Phone:</td><td>$phone</td></tr>";
+        echo "<tr><td>Phone:</td><td>+$prefix $phone</td></tr>";
         echo "<tr><td>Affair:</td><td>$affair</td></tr>";
         echo "<tr><td>Message:</td><td>$message</td></tr>";
         echo "</table>";
