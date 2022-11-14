@@ -1,0 +1,111 @@
+/* colors 
+    gradiente : darkred , darkorange
+    transitions : indigo, darkorange
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+header h1{
+    color:darkred;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: darkorange;
+    background-image: linear-gradient(0deg, darkred, darkred 40vh, darkorange 100vh );
+}
+
+
+/* boxs */
+
+section{
+    text-align: center;
+}
+
+article{
+    background-color: inherit;
+    border: 5px solid white;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    height: 63vh;
+    transition: background-color 2s;
+}
+
+article:hover{
+    background-color:indigo;
+}
+
+/* icons */
+
+i{
+    color: white;
+    font-size: 180px;
+    margin: 20px;
+    transition: transform 4s, color 4s;
+}
+
+i:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    color: darkorange;
+}
+
+
+/* text */
+
+.text{
+    color: white;
+    font-size: 25px;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+
+.text p{
+    filter: blur(5px);
+    transition: opacity 2s, transform 2s, filter 2s,color 2s;
+    transform:scale(0.5) rotate(45deg);
+    opacity: 0;
+}
+
+.text:hover p{
+    cursor: pointer;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0px);
+    opacity: 1;
+    color: rgb(201, 140, 66);
+}
+
+
+footer{
+    text-align: center;
+    margin-top: 20px;
+    color: darkorange;
+    font-size: 40px;
+}
+
+/* media query phone */
+
+@media screen and (max-width: 900px){
+    article{
+        width: 70%;
+        height: 50vh;
+    }
+}
