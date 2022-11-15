@@ -22,10 +22,8 @@ header h1{
 }
 
 body{
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background-color: darkorange;
-    background-image: linear-gradient(0deg, darkred, darkred 40vh, darkorange 100vh );
+    background-image: linear-gradient(0deg, darkred, darkred 40%, darkorange 100% );
 }
 
 
@@ -80,18 +78,22 @@ i:hover{
 
 .text p{
     filter: blur(5px);
-    transition: opacity 2s, transform 2s, filter 2s,color 2s;
+    transition: visibility 2s, transform 2s, filter 2s;
+    visibility: hidden;
     transform:scale(0.5) rotate(45deg);
-    opacity: 0;
 }
 
 .text:hover p{
     cursor: pointer;
+    visibility: visible;
     transform: scale(1) rotate(0deg);
     filter: blur(0px);
-    opacity: 1;
-    color: rgb(201, 140, 66);
 }
+
+
+
+
+
 
 
 footer{
@@ -99,13 +101,4 @@ footer{
     margin-top: 20px;
     color: darkorange;
     font-size: 40px;
-}
-
-/* media query phone */
-
-@media screen and (max-width: 900px){
-    article{
-        width: 70%;
-        height: 50vh;
-    }
 }

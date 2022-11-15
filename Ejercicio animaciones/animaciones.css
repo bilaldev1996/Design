@@ -1,0 +1,179 @@
+/* colors 
+    title = darkmagenta,darkslategray,darkorange,crimson,darkblue
+    gradienteFondo = rgb(232,95,240),rgb(62,180,240),rgb(154,240,93),rgb(240,165,72)
+    bloaqueMovbil = darkred, orangered,gold,darkgreen,royalblue,darkorchid
+*/
+
+/* fonts
+    title = "Abril Fatface";
+    h2 = "Bangers";
+
+*/
+
+/* estilos y animación h1 */
+
+.container h1 {
+    width: 97%;
+    margin: 1vw auto;
+    text-align: center;
+    font-size: 5vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 5px solid black;
+    color: black;
+    letter-spacing: -5px;
+    text-shadow: -2px -2px 2px #fff, 2px -2px 2px #fff, -2px 2px 2px #fff, 2px 2px 2px #fff;
+
+    font-family: "Abril Fatface", cursive;
+    animation: fondoH1 10s linear infinite backwards alternate;
+}
+
+
+@keyframes fondoH1 {
+    0% {
+        background: darkmagenta;
+    }
+
+    25% {
+        background: darkslategray;
+    }
+
+    50% {
+        background: darkorange;
+    }
+
+    75% {
+        background: crimson;
+    }
+
+    100% {
+        background: darkblue;
+    }
+}
+
+
+/* fondo animado */
+body {
+    background: linear-gradient(-45deg, rgb(232, 95, 240), rgb(62, 180, 240), rgb(154, 240, 93), rgb(240, 165, 72)) fixed;
+    animation: gradiente 20s linear infinite backwards alternate;
+    background-size: 400% 400%;
+}
+
+@keyframes gradiente {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* estilos y animación h2 */
+
+.container h2 {
+    width: 35%;
+    margin: 1.2vw;
+    font-size: 4vw;
+    padding: 8px;
+    font-family: "Bangers", cursive;
+    text-align: center;
+    text-shadow: -1px -1px 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff, 1px 1px 1px #fff;
+    border: 3px solid black;
+    animation: animacion1 20s ease-out infinite, animacion2 20s linear infinite;
+    background: darkred;
+    position: relative;
+}
+
+
+
+
+@keyframes animacion1 {
+    0% {
+        background: darkred;
+        top: 0;
+        left: 0px;
+    }
+
+    20% {
+        background: orangered;
+        left: 60vw;
+        top: 0px;
+    }
+
+    30%,35%,39% {
+        background: gold;
+        left: 60vw;
+        top: 0px;
+    }
+
+    40% {
+        background: green;
+        color: darkmagenta;
+        left: 45vw;
+        top: 20vh;
+    }
+
+    60% {
+        background: royalblue;
+        left: 60vw;
+        top: 61vh;
+    }
+
+    80% {
+        background: darkorchid;
+        color: darkmagenta;
+        left: 0px;
+        top: 60vh;
+    }
+
+    100% {
+        background: darkred;
+        color: crimson;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes animacion2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(0deg);
+    }
+
+
+    30%{
+        transform: rotate(180deg);
+    }
+
+    40% {
+        transform:rotateY(-180deg) rotate(-180deg);
+    }
+
+    55%{
+        transform:rotate(0deg);
+    }
+    /* no tocar */
+
+    60% {
+        transform: rotateY(180deg);
+    }
+
+    80% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotateX(180deg);
+    }
+}
+
+
+
