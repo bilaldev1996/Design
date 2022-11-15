@@ -84,7 +84,7 @@ body {
     text-align: center;
     text-shadow: -1px -1px 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff, 1px 1px 1px #fff;
     border: 3px solid black;
-    animation: animacion1 20s linear infinite, animacion2 20s linear infinite;
+    animation: animacion1 20s linear infinite, animacion2 20s linear  infinite forwards normal;
     background: darkred;
     position: relative;
 }
@@ -154,24 +154,23 @@ body {
     }
 
     40% {
-        transform:rotate(-90deg) rotateX(90deg);
+        transform: rotateX(180deg) rotateZ(-90deg);
     }
 
 
     /* no tocar */
 
     60% {
-        transform: rotateY(180deg);
+        transform: rotateZ(180deg);
     }
 
     80% {
-        transform: rotate(0deg);
+        transform: rotateX(180deg);
     }
 
     100% {
-        transform: rotateX(180deg);
+        transform: rotateX(0);
     }
 }
-
 
 
