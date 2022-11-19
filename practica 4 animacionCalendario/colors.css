@@ -21,7 +21,7 @@
     --color1_9: #ffffff;
 
     /* colores arcoiris */
-    --color2_1: #e81313;
+    --color2_1: rgba(190, 49, 49,0.5);
     --color2_2: #fb7b0a;
     --color2_3: #ff0;
     --color2_4: #00ff00;
@@ -31,19 +31,35 @@
     --color2_7: #00f7ff;
 
     /* tiempos */
-    --tiempo-animation1: 2s;
+    --tiempo-animation1: 3s;
     --tiempo-animation2: 10s;
 
-    --del1_1: calc(var(--tiempo-animation1) / 10);
-    --del1_2: calc(2 * var(--del1_1));
-    --del1_3: calc(3 * var(--del1_1));
-    --del1_4: calc(4 * var(--del1_1));
-    --del1_5: calc(5 * var(--del1_1));
-    --del1_6: calc(6 * var(--del1_1));
-    --del1_7: calc(7 * var(--del1_1));
-    --del1_8: calc(8 * var(--del1_1));
+    /* delay animacion 1 */
+    --del1_1: calc(var(--tiempo-animation1)/10);
+    --del1_2: calc(var(--del1_1)*2);
+    --del1_3: calc(var(--del1_1)*3);
+    --del1_4: calc(var(--del1_1)*4);
+    --del1_5: calc(var(--del1_1)*5);
+    --del1_6: calc(var(--del1_1)*6);
+    --del1_7: calc(var(--del1_1)*7);
+    --del1_8: calc(var(--del1_1)*8);
 
+    /* delay animacion 2 */
     --del1_9 : calc(20 * var(--del1_1));
+    --del1_10: calc(21 * var(--del1_1));
+    --del1_11: calc(22 * var(--del1_1));
+    --del1_12: calc(23 * var(--del1_1));
+    --del1_13: calc(24 * var(--del1_1));
+    --del1_14: calc(25 * var(--del1_1));
+    --del1_15: calc(26 * var(--del1_1));
+    --del1_16: calc(27 * var(--del1_1));
+    --del1_17: calc(28 * var(--del1_1));
+    --del1_18: calc(29 * var(--del1_1));
+    --del1_19: calc(30 * var(--del1_1));
+    --del1_20: calc(31 * var(--del1_1));
+    --del1_21: calc(32 * var(--del1_1));
+    --del1_22: calc(33 * var(--del1_1));
+    --del1_23: calc(34 * var(--del1_1));
     
 
 
@@ -86,7 +102,7 @@ h3 {
     padding: 1vh 2vw;
 }
 
-.cuadrado {
+.cuadrado{
     display: grid;
     grid-template-columns: repeat(8, 105px);
     grid-template-rows: repeat(8, 105px);
@@ -94,10 +110,11 @@ h3 {
 }
 
 .casilla {
-    border: 2px solid var(--color_texto);
+    border: 1px solid var(--color_texto);
     width: 100px;
     height: 100px;
 }
+
 
 
 
@@ -146,6 +163,7 @@ h3 {
     animation: saltos var(--tiempo-animation1) ease var(--del1_1) forwards;
 }
 
+
 .fila2 {
     animation: saltos var(--tiempo-animation1) ease var(--del1_2) forwards;
 }
@@ -172,7 +190,7 @@ h3 {
 
 .fila8 {
     animation: saltos var(--tiempo-animation1) ease var(--del1_8) forwards;
-}
+} 
 
 
 
@@ -218,64 +236,66 @@ h3 {
 
 /* empezar por la casilla 8 luego casilla 7,16 luego casilla 6,15,24 */
 
-.casilla8 {
-    animation: colors var(--tiempo-animation2) ease  4s infinite;
+
+.caja2_8 {
+    animation: colors var(--tiempo-animation2) ease  var(--del1_9) infinite;
 }
 
-.casilla7,.casilla16 {
-    animation: colors var(--tiempo-animation2) ease 4.2s infinite;
+.caja2_7, .caja2_16 {
+    animation: colors var(--tiempo-animation2) ease  var(--del1_10) infinite;
 }
 
-.casilla6,.casilla15,.casilla24 {
-    animation: colors var(--tiempo-animation2) ease 4.4s infinite;
+.caja2_6, .caja2_15, .caja2_24 {
+    animation: colors var(--tiempo-animation2) ease  var(--del1_11) infinite;
 }
 
-.casilla5,.casilla14,.casilla23,.casilla32 {
-    animation: colors var(--tiempo-animation2) ease 4.6s infinite;
+.caja2_5, .caja2_14, .caja2_23, .caja2_32 {
+    animation: colors var(--tiempo-animation2) ease  var(--del1_12) infinite;
 }
 
-.casilla4,.casilla13,.casilla22,.casilla31,.casilla40 {
-    animation: colors var(--tiempo-animation2) ease 4.8s infinite;
+.caja2_4, .caja2_13, .caja2_22, .caja2_31, .caja2_40 {
+    animation: colors var(--tiempo-animation2) ease   var(--del1_13) infinite;
 }
 
-.casilla3,.casilla12,.casilla21,.casilla30,.casilla39,.casilla48 {
-    animation: colors var(--tiempo-animation2) ease 5s infinite;
+.caja2_3, .caja2_12, .caja2_21, .caja2_30, .caja2_39, .caja2_48 {
+    animation: colors var(--tiempo-animation2) ease var(--del1_14) infinite;
 }
 
-.casilla2,.casilla11,.casilla20,.casilla29,.casilla38,.casilla47,.casilla56 {
-    animation: colors var(--tiempo-animation2) ease 5.2s infinite;
+.caja2_2, .caja2_11, .caja2_20, .caja2_29, .caja2_38, .caja2_47, .caja2_56 {
+    animation: colors var(--tiempo-animation2) ease  var(--del1_15) infinite;
 }
 
-.casilla1,.casilla10,.casilla19,.casilla28,.casilla37,.casilla46,.casilla55,.casilla64 {
-    animation: colors var(--tiempo-animation2) ease 5.4s infinite;
+
+.caja2_1, .caja2_10, .caja2_19, .caja2_28, .caja2_37, .caja2_46, .caja2_55, .caja2_64 {
+    animation: colors var(--tiempo-animation2) ease  var(--del1_16) infinite;
 }
 
-.casilla9,.casilla18,.casilla27,.casilla36,.casilla45,.casilla54,.casilla63{
-    animation: colors var(--tiempo-animation2) ease 5.6s infinite;
+.caja2_9, .caja2_18, .caja2_27, .caja2_36, .caja2_45, .caja2_54, .caja2_63, .caja2_72 {
+    animation: colors var(--tiempo-animation2) ease  var(--del1_17) infinite;
 }
 
-.casilla17,.casilla26,.casilla35,.casilla44,.casilla53,.casilla62{
-    animation: colors var(--tiempo-animation2) ease 5.8s infinite;
+.caja2_17, .caja2_26, .caja2_35, .caja2_44, .caja2_53, .caja2_62, .caja2_71 {
+    animation: colors var(--tiempo-animation2) ease   var(--del1_18) infinite;
 }
 
-.casilla25,.casilla34,.casilla43,.casilla52,.casilla61{
-    animation: colors var(--tiempo-animation2) ease 6s infinite;
+.caja2_25, .caja2_34, .caja2_43, .caja2_52, .caja2_61, .caja2_70 {
+    animation: colors var(--tiempo-animation2) ease  var(--del1_19) infinite;
 }
 
-.casilla33,.casilla42,.casilla51,.casilla60{
-    animation: colors var(--tiempo-animation2) ease 6.2s infinite;
+.caja2_33, .caja2_42, .caja2_51, .caja2_60, .caja2_69 {
+    animation: colors var(--tiempo-animation2) ease  var(--del1_20) infinite;
 }
 
-.casilla41,.casilla50,.casilla59{
-    animation: colors var(--tiempo-animation2) ease 6.4s infinite;
+.caja2_41, .caja2_50, .caja2_59, .caja2_68 {
+    animation: colors var(--tiempo-animation2) ease  var(--del1_21) infinite;
 }
 
-.casilla49,.casilla58{
-    animation: colors var(--tiempo-animation2) ease 6.6s infinite;
+.caja2_49, .caja2_58, .caja2_67 {
+    animation: colors var(--tiempo-animation2) ease  var(--del1_22) infinite;
 }
 
-.casilla57{
-    animation: colors var(--tiempo-animation2) ease 6.8s infinite;
+.caja2_57, .caja2_66 {
+    animation: colors var(--tiempo-animation2) ease  var(--del1_23) infinite;
 }
 
 
