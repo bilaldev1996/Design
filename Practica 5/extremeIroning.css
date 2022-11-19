@@ -1,7 +1,7 @@
 
 
 /* fonts
-    p : boxes
+    p : Voces
     h1 : russo one
     ul li -> jetbrains mono
 */
@@ -68,9 +68,14 @@ h1{
 p{
     text-align: left;
     font-size: .9em;
-    font-family: 'boxes', sans-serif;
+    font-family: 'Voces', cursive;
     text-align: justify;
     padding: 1.4vw;
+}
+
+span{
+    font-weight: normal;
+    font-family: cursive;
 }
 
 section > article{
