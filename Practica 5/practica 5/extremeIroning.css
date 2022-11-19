@@ -1,0 +1,255 @@
+
+
+/* fonts
+    p : boxes
+    h1 : russo one
+    ul li -> jetbrains mono
+*/
+
+
+:root{
+    --font-p: 'JetBrains Mono', monospace;
+    --font-h1: 'Russo One', sans-serif;
+    --font-ul: 'JetBrains Mono', monospace;
+
+    --color-p-article1:#9009a5 ;
+    --color-h1: #8b008b;
+    --color-h3:#7b3e85;
+    --color-ul: #680e75;
+    --color-li: #f7b0dc;
+    --color-a: #f869b2;
+    --color-a-hover: #e3f1eb;
+    --color-a-visited: #000000;
+    --color-background-article1:#dcd;
+    --color-background-container2:#b036c6;
+    --color-border-img:#9009a5;
+    --color-border-iframe:#d6a8ab;
+    --color-extreme:#6c0740;
+    --color-extreme-hover:#e3f1eb;
+}
+
+
+
+body{
+    background-color: #8C65A6;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%238C65A6' cx='50' cy='0' r='50'/%3E%3Cg fill='%238a63a5' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%238861a4' cx='50' cy='100' r='50'/%3E%3Cg fill='%23855fa3' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23835da2' cx='50' cy='200' r='50'/%3E%3Cg fill='%23815ba1' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%237f589f' cx='50' cy='300' r='50'/%3E%3Cg fill='%237c569e' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%237a549d' cx='50' cy='400' r='50'/%3E%3Cg fill='%2377519c' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23754f9b' cx='50' cy='500' r='50'/%3E%3Cg fill='%23724c9a' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23704a99' cx='50' cy='600' r='50'/%3E%3Cg fill='%236d4797' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%236a4496' cx='50' cy='700' r='50'/%3E%3Cg fill='%23674195' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23653e94' cx='50' cy='800' r='50'/%3E%3Cg fill='%23623a93' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%235e3791' cx='50' cy='900' r='50'/%3E%3Cg fill='%235b3390' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23582F8F' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+
+section{
+    text-align: center;
+    width: 80%;
+    margin:0 auto;
+}
+
+
+
+article.first{
+    width: 100%;
+    background-color: var(--color-background-article1);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+h1{
+    font-family: 'Russo One',sans-serif;
+    color: var(--color-h1);
+    font-weight: bold;
+    font-size: 6vw;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 0;
+}
+
+p{
+    text-align: left;
+    font-size: .9em;
+    font-family: 'boxes', sans-serif;
+    text-align: justify;
+    padding: 1.4vw;
+}
+
+section > article{
+    color: var(--color-p-article1);
+    padding:0px 20px 10px 20px;
+    
+}
+
+a{
+    color: var(--color-a);
+    transition:letter-spacing 0.5s ease-out;
+}
+
+a[href*='ExtremeIroningOfficial']:hover,a[href*='world-records']:hover,a[href*='wikipedia']:hover{
+    letter-spacing: 2px;
+    filter: blur(.4px);
+    text-shadow: 0 0 7px black;
+    font-weight: bold;
+}
+
+.extreme{
+    color: var(--color-extreme);
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+.extreme:hover{
+    color: var(--color-extreme-hover);
+}
+
+img{
+    border: 5px solid var(--color-border-img);
+    border-radius: 5px;
+}
+
+iframe{
+    border: 5px solid var(--color-border-iframe);
+    border-radius: 5px;
+    width: 52%;
+}
+
+img[alt='escalando']{
+    width: 70%;
+}
+
+img[alt='saltando']{
+    width: 60%;
+}
+
+
+/* ------------- */
+
+.container2{
+    border: 2px solid white;
+    width: 100%;
+    padding: 12px;
+    border-radius: 3px;
+    padding-bottom: 15px;
+}
+
+.container2 article{
+    background-color: var(--color-background-container2);
+    border-radius: 0px;
+    margin-bottom: 2vw; /* 20px */
+    color: white;
+    width: 100%;
+    font-size: 1em;
+    padding-bottom: 2vw;
+    padding-top: 2vw;
+}
+
+.container2 article:last-child{
+    padding-bottom: .5vw;
+    margin-bottom: -0.4vw;
+}
+
+
+
+.container2 article p{
+    width: 80%;
+    margin: 0 auto;
+    line-height: 2.2vw;
+    margin-bottom: 20px;
+}
+
+.container2 article p::first-letter{
+    font-size: 2em;
+    font-weight: normal;
+    color: var(--color-a);
+}
+
+
+h3{
+    font-family: 'Russo One',sans-serif;
+    text-align: left;
+    color: var(--color-h3); 
+    font-weight: bold;
+    width: 99%;
+    background-color: white;
+    margin: 0 auto;
+    padding-left: .8vw;
+    padding-bottom: 5px;
+}
+
+a.visited{
+    color:black;
+}
+
+
+.list{
+    font-family: 'JetBrains Mono', monospace;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 78%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    background-color: var(--color-li);
+    border: 8px solid var(--color-a);
+    padding: 2px;
+    transition: all 2s ease-out;
+}
+
+ul{
+    margin-left: -1.8vw;
+}
+
+.list li{
+    list-style-type: square;
+    margin-bottom: 1vw;
+}
+
+.list ul li strong{
+    color: var(--color-ul);
+    text-decoration: underline;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+
+.list ul li:nth-child(2) strong{
+    margin-left: 20px;
+}
+
+
+.list ul > li{
+    color: var(--color-ul);
+    font-weight: normal;
+}
+
+.list:hover{
+    background-color: var(--color-ul);
+}
+
+.list:hover li{
+    color: var(--color-li);
+}
+
+.list:hover li strong{
+    color:  var(--color-li);
+}
+
+
+footer{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+.foot{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 10px;
+    padding: 20px 0 20px 28px;
+    background-color: gray;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
