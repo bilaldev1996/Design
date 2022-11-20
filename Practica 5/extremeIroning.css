@@ -8,7 +8,7 @@
 
 
 :root{
-    --font-p: 'JetBrains Mono', monospace;
+    --font-p: 'Voces', cursive;
     --font-h1: 'Russo One', sans-serif;
     --font-ul: 'JetBrains Mono', monospace;
 
@@ -55,7 +55,7 @@ article.first{
 }
 
 h1{
-    font-family: 'Russo One',sans-serif;
+    font-family: var(--font-h1);
     color: var(--color-h1);
     font-weight: bold;
     font-size: 6vw;
@@ -68,7 +68,7 @@ h1{
 p{
     text-align: left;
     font-size: .9em;
-    font-family: 'Voces', cursive;
+    font-family: var(--font-p);
     text-align: justify;
     padding: 1.4vw;
 }
@@ -86,7 +86,7 @@ section > article{
 
 a{
     color: var(--color-a);
-    transition:letter-spacing 0.5s ease-out;
+    transition: 0.5s;
 }
 
 a[href*='ExtremeIroningOfficial']:hover,a[href*='world-records']:hover,a[href*='wikipedia']:hover{
@@ -130,10 +130,10 @@ img[alt='saltando']{
 
 .container2{
     border: 2px solid white;
-    width: 100%;
-    padding: 12px;
+    width: 80.5vw;
+    padding: 4px;
     border-radius: 3px;
-    padding-bottom: 15px;
+    padding-bottom: 8px;
 }
 
 .container2 article{
@@ -169,7 +169,7 @@ img[alt='saltando']{
 
 
 h3{
-    font-family: 'Russo One',sans-serif;
+    font-family: var(--font-h1);
     text-align: left;
     color: var(--color-h3); 
     font-weight: bold;
@@ -186,7 +186,7 @@ a.visited{
 
 
 .list{
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-ul);
     text-align: left;
     margin: 0;
     padding: 0;
@@ -248,11 +248,11 @@ footer{
 
 .foot{
     text-align: center;
-    width: 100%;
+    width: 80.5vw;
     margin: 0 auto;
     background-color: white;
     margin-top: 10px;
-    padding: 20px 0 20px 28px;
+    padding: 20px 0 20px 12px;
     background-color: gray;
     border-top: 3px solid white;
     border-bottom: 3px solid white;
