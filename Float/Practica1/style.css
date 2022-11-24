@@ -16,7 +16,7 @@ header{
 .contenedor{
     background-color:  #F15946;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.1em;
+    font-size: 1.3rem;
 }
 
 .contenedor .cajas1{
@@ -52,14 +52,14 @@ div.c4{
 .contenedor .cajas2 div{
     color: white;
     border: 3px solid white;
-    margin: 7px;
-    padding: .22vw;
+    margin:10px;
+    padding: .2vw;
     line-height: 20px;
 }
 
 .cn1{
     width: 30%;
-    height: 46.2vh;
+    height: 83%;
     float: right;
     background-color: #E01A4F;
 }
