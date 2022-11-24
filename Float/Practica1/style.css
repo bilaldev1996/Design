@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    height: 10vh;
+    padding-top: 5px;
+}
+
+
+.contenedor{
+    background-color:  #F15946;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+}
+
+.contenedor .cajas1{
+    height: 30vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.contenedor .cajas1 div{
+    background-color:#F9C22E;
+    color:  #E01A4F;
+	border: 3px solid black;
+    width: 21vw;
+    height: 40%;
+    padding: .5vw;
+    margin: .5vw;
+    float: left;
+}
+
+div.c4{
+    clear: both;
+}
+
+
+/* segundo article */
+.contenedor .cajas2{
+    background-color:  #53B3CB;
+    height: 60vh;
+    padding: 1vw 1vw;
+}
+
+.contenedor .cajas2 div{
+    color: white;
+    border: 3px solid white;
+    margin: 7px;
+    padding: .22vw;
+    line-height: 20px;
+}
+
+.cn1{
+    width: 30%;
+    height: 46.2vh;
+    float: right;
+    background-color: #E01A4F;
+}
+
+.cn2,.cn3{
+    width:60%;
+    float: left;
+    background-color:#F15946;
+}
+
+.cn2{
+    height: 30%;
+}
+
+.cn3{
+    height: 50%;
+}
+
+.contenedor .cajas2 .cn4{
+    width: 80%;
+    height: 15%;
+    background-color: #E01A4F;
+    clear: both;
+    margin: 0 auto;
+}
+
