@@ -10,6 +10,7 @@ body {
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'Atma', serif;
+    font-weight: 500;
 }
 
 p{
@@ -24,7 +25,7 @@ p{
 }
 
 .contenido h1{
-    background-color: #796DCE;
+    background-color: rgba(121, 109, 206,.7);
     width: 90%;
     margin: 2rem auto;
     border: 5px solid black;
@@ -34,13 +35,18 @@ p{
     font-weight: bold;
 }
 
+
+
+
+
 .contenido h2{
-    background-color:#fff5fe ;
+    background-color:rgba(255, 245, 254,.7) ;
     width: 95%;
     margin: 2rem auto;
     padding: 10px;
     border: 2px solid black;
     font-size: 2rem;
+    opacity: .9;
 }
 
 .contenido1{
@@ -51,35 +57,43 @@ p{
     width: 25vw;
     height: auto;
     float: left;
-    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(117, 36%, 44%, 1)'/><path d='M-10 5l20 10L30 5l20 10'  stroke-linecap='square' stroke-width='2.5' stroke='hsla(258.5,59.4%,59.4%,1)' fill='none'/><path d='M-10 25l20 10 20-10 20 10'  stroke-linecap='square' stroke-width='2.5' stroke='hsla(109, 57%, 30%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='70' height='8' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(120, 43%, 67%, 0.6)'/><path d='M-.02 22c8.373 0 11.938-4.695 16.32-9.662C20.785 7.258 25.728 2 35 2c9.272 0 14.215 5.258 18.7 10.338C58.082 17.305 61.647 22 70.02 22M-.02 14.002C8.353 14 11.918 9.306 16.3 4.339 20.785-.742 25.728-6 35-6 44.272-6 49.215-.742 53.7 4.339c4.382 4.967 7.947 9.661 16.32 9.664M70 6.004c-8.373-.001-11.918-4.698-16.3-9.665C49.215-8.742 44.272-14 35-14c-9.272 0-14.215 5.258-18.7 10.339C11.918 1.306 8.353 6-.02 6.002'  stroke-width='1' stroke='hsla(259, 40%, 65%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
     margin: 1rem;
-    padding: 5px 2px;
+    padding: 15px;
     border: 3px solid #0e0936;
+    text-align: justify;
+    opacity: .9;
 }
 
 
 .contenido1 img{
-    width:50%;
+    width:46%;
     height: 50%;
     float: left;
-    padding: .2rem;
+    padding: .1rem;
 }
 
-.caja1 {
-    margin-left: 5rem ;
+.contenido1 .caja1 {
+    margin-left: 5rem;
 }
 
-.caja4{
-    margin-left: -7rem ;
+
+.contenido1 .caja4{
+    margin-left: 14rem;
 }
 
-.caja4, .caja5 {
-    margin-top: 2rem !important;
+
+.contenido1 .caja4, .contenido1 .caja5 {
+    margin-top: 2rem ;
+    margin-bottom: 3rem;
+    width: 31vw;
 }
 
 
 span{
     color: #8B0000;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 
@@ -95,64 +109,93 @@ span{
 .contenido2 h4{
     color: #A3B4A2;
     font-size: 1.5rem;
+    padding-bottom:1rem ;
 }
 
 .contenido2 div{
     text-align: center;
-    width: 19vw;
-    padding: 5px;
+    width: 18vw;
+    padding: 7px;
+    word-spacing: 3px;
     float: left;
     margin: 1rem ;
     border: 3px solid black;
-    background-image: linear-gradient(to bottom, #0D1F22 10%, #A3B4A2 20%);
+    background-image: linear-gradient(to bottom, rgba(13, 31, 34,.7) 10%, rgba(163, 180, 162,.7) 20%);
 }
 
+.contenido2 .caja6{
+    margin-left: 3rem ;
+}
+
+
 .contenido2 div img{
-    width: 70%;
+    width: 90%;
 }
 
 .contenido2 div p{
     text-align: left;
+    text-align: justify;
 }
 
 .contenido3{
     clear: both;
 }
 
-.contenido3 div{
+.contenido3 div:not(.header){
     width: 20vw;
-    padding: 5px;
+    word-spacing: 10px;
     float: left;
     margin: 1rem;
     border: 3px solid black;
-    padding: .5rem;
-    background-image: linear-gradient(to bottom,  #A3B4A2 20%, #0D1F22 20%);
+    background-color: rgba(13, 31, 34,.8);
 }
 
 .contenido3 div img{
     width: 25%;
     float: right;
-    margin: .5rem;
+    margin: 1.2rem;
 }
 
-.contenido3 h4{
+.contenido3 div.header{
+    background-color: rgba(163, 180, 162) ;
+    border-bottom: 3px solid black;
+    width: 100%;
+    height: 15vh;
+}
+
+
+.contenido3 div h4{
     color: black;
     float: left;
     font-size: 2rem;
-    width: 55%;
+    width: 60%;
     text-align: center;
+    font-weight: bold;
+    padding: 5px;
 }
 
-.contenido3 p{
+.contenido3 div p{
     color: #A3B4A2;
     clear: both;
+    padding-top: .5rem;
+    text-align: justify;
+    line-height: 1.5rem;
+    padding: 1rem;
+    opacity: .9;
 }
+
 
 .footer{
     width: 100%;
     text-align: center;
     clear: both;
     padding: 1rem;
+    font-size: 1.2rem;
+    font-weight:bold;
+}
+
+.footer p{
+    font-family: 'Atma', cursive;
 }
 
 .footer a{
