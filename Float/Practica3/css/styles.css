@@ -1,0 +1,25 @@
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    font-size:62.5%;
+}
+
+body{
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.boxTitulo{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 2rem;
+}
+
+.boxTitulo h1,h2{
+    font-size: 4rem;
+    color: rgb(37, 70, 59);
+}
