@@ -5,21 +5,233 @@
     font-size:62.5%;
 }
 
-body{
-    background-image: url(../img/fondo.jpg);
+.titulo_menu{
+    width: 100%;
+    background-image: url(../img/fondoTitulo1.jpg);
     background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .boxTitulo{
-    width: 70%;
+    width: 100%;
+    height: 30vh;
     text-align: center;
     margin: 0 auto;
-    margin-top: 5rem;
     padding: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* degradado fondo con peces */    
 }
 
-.boxTitulo h1,h2{
-    font-size: 4rem;
-    color: rgb(37, 70, 59);
+.boxTitulo h1{
+    font-size: 7rem;
+    color: #fff;
+    margin-top: 3rem;
+    font-family: 'Lobster', cursive;
 }
+
+
+.menu_principal{
+    width: 98%;
+    margin: 0 auto;
+    margin-left: 2vw;
+    margin-top: 2vw;
+}
+
+.menu_principal > div{
+    width: 15vw;
+    margin-top: 3rem;
+    border-radius: 15rem;
+    font-size: 3rem;
+    float: left;
+    margin: .5vw;
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    transition: all .5s;
+}
+
+.menu_principal div:hover{
+    opacity: 1 ;
+    transform: scale(1.2);
+}
+
+
+.menu_principal > div a{
+    display: block;
+    text-align: center;
+    height: 20vh;
+    text-decoration: none;
+    color: #000;
+    font-size: 4rem;
+    font-family: 'Lobster', cursive;
+    margin-top: 3rem;
+    transition: all .5s;
+}
+
+.menu_principal > div a:hover{
+    animation: animacion 1s infinite;
+    color: white;
+}
+
+@keyframes animacion{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.menu_principal{
+    width: 98%;
+    height: 25vh;
+}
+
+.menu_principal > div:nth-child(1){
+    background-image: url(../img/entrantes.jpg);
+}
+
+.menu_principal > div:nth-child(2){
+    background-image: url(../img/pescados.jpg);
+}
+
+.menu_principal > div:nth-child(3){
+    background-image: url(../img/mariscos.jpg);
+}
+
+.menu_principal > div:nth-child(4){
+    background-image: url(../img/pulpos.jpg);
+}
+
+.menu_principal > div:nth-child(5){
+    background-image: url(../img/carnes.jpg);
+}
+
+.menu_principal > div:nth-child(6){
+    background-image: url(../img/postres.jpg);
+}
+
+
+div[class*="contenedor"]{
+    width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.contenedor_entrantes{
+    background-image: url(../img/fondoEntrantes.jpg);
+}
+
+.contenedor_pescados{
+    background-image: url(../img/fondoPescados.jpg);
+}	
+
+.contenedor_mariscos{
+    background-image: url(../img/fondoMariscos.jpg);
+}	
+
+.contenedor_pulpos{
+    background-image: url(../img/fondoPulpos.jpg);
+}
+
+.contenedor_carnes{
+    background-image: url(../img/fondoCarnes.jpg);
+    
+}
+
+.contenedor_postres{
+    background-image: url(../img/fondoPostres.jpg);
+}
+
+
+.contenedorPlatos h2{
+    font-size: 5rem;
+    font-family: 'Lobster', cursive;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #fff;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contenedorPlatos{
+    width: 70vw;
+    border-radius: 1rem;
+    transition: all .5s;
+    font-size: 10rem;
+    margin-left: 15vw;
+    clear: both;
+    overflow: hidden;
+    padding-bottom: 1vw;
+    color: #fff;
+}
+
+.contenedorPlatos{
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+
+.menu{
+    padding: 0 5vw;
+}
+
+.contenedorAlergenos {
+    text-align: right;
+    width: 100%;
+    padding: .5vw 1.5vw;
+    height: 5vw;
+}
+
+.plato{
+    font-size: 3vw;
+    width: 60%;
+    font-family: 'Mirza', cursive;
+}
+
+.precio{
+    font-size: 3vw;
+    width: 20%;
+    font-family: 'Mirza', cursive;
+}
+
+.alergeno {
+    width: 3vw;
+    height: 5vw;
+    margin: 0 .5vw;
+    padding-top: 1vw;
+}
+
+footer{
+    text-align: center;
+    width: 100%;
+    background-image: url(../img/fondoTitulo1.jpg);
+    background-repeat: no-repeat;
+    padding: 1px 0;
+}
+
+footer img{
+    width: 100%;
+}
+
+.alergenoFooter{
+    width: 8vw;
+    margin: 0 .5vw;
+}
+
+.primeraFila, .segundaFila{
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgba(233, 222, 222, 0.5);
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+

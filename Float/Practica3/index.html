@@ -1,20 +1,682 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>El pescaito Frito</title>
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El pescaito Frito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mirza&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="titulo_menu">
         <header class="boxTitulo">
-            <h1>Restaurante</h1>
-            <h2>El Pescaito Frito</h2>
+            <h1>El Pescaito Frito</h1>
         </header>
-        <main class="contenido_principal">
-            
-        </main>
-        <footer></footer>
-    </body>
+        <nav class="menu_principal" id="menu_principal">
+            <div class="entrantes">
+                <a href="#entrantes">
+                    Entrantes
+                </a>
+            </div>
+            <div class="pescados">
+                <a href="#pescados">
+                    Pescados
+                </a>
+            </div>
+            <div class="mariscos">
+                <a href="#mariscos">
+                    Mariscos
+                </a>
+            </div>
+            <div class="pulpos">
+                <a href="#pulpos">
+                    Pulpos
+                </a>
+            </div>
+            <div class="carnes">
+                <a href="#carnes">
+                    Carnes
+                </a>
+            </div>
+            <div class="postres">
+                <a href="#postres">
+                    Postres
+                </a>
+            </div>
+        </nav>
+    </div>
+    <main class="contenido_principal">
+        <div class="contenedor_entrantes">
+            <article class="contenedorPlatos entrantes" id="entrantes">
+                <h2>Entrantes</h2>
+                <table class="menu">
+                    <tr>
+                        <td class="plato">Patatas Fritas</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">3,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Berenjenas Fritas</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"></td>
+                        <td class="precio">5,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensalada Mixta (1 pers) </td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">5,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensalada Mixta (2 pers) </td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">8,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensaladilla Rusa</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/huevos.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">6,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensalada Variada (1 pers)</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"><img
+                                class="alergeno" src="./img/alergenos/huevos.png"><img class="alergeno"
+                                src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">6,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensalada Variada (2 pers)</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"><img
+                                class="alergeno" src="./img/alergenos/huevos.png"><img class="alergeno"
+                                src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensalada de pimientos</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">6,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Patatas a la Brava</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/huevos.png"><img
+                                class="alergeno" src="./img/alergenos/gluten.png"></td>
+                        <td class="precio">6,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Paella</td>
+                        <td class="contenedorAlergenos">
+                            <img class="alergeno" src="./img/alergenos/pescado.png">
+                            <img class="alergeno" src="./img/alergenos/gluten.png">
+                            <img class="alergeno" src="./img/alergenos/moluscos.png">
+                        </td>
+                        <td class="precio">8,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Caracoles</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"></td>
+                        <td class="precio">8,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensalada de Pulpo</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"></td>
+                        <td class="precio">8,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensalada Tropical</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/huevos.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">8,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensalada AliOli</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/huevos.png"></td>
+                        <td class="precio">6,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensalada Mejillones</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"></td>
+                        <td class="precio">8,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensalada de Delicias</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">8,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Croquetas de pollo</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/lacteos.png"><img class="alergeno"
+                                src="./img/alergenos/huevos.png"></td>
+                        <td class="precio">9,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Croquetas de Marisco</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"><img
+                                class="alergeno" src="./img/alergenos/gluten.png"><img class="alergeno"
+                                src="./img/alergenos/lacteos.png"><img class="alergeno"
+                                src="./img/alergenos/huevos.png"></td>
+                        <td class="precio dCifras">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Croquetas de Choco</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"><img
+                                class="alergeno" src="./img/alergenos/gluten.png"><img class="alergeno"
+                                src="./img/alergenos/lacteos.png"><img class="alergeno"
+                                src="./img/alergenos/huevos.png"></td>
+                        <td class="precio dCifras">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Anchoas</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio dCifras">12,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Patatas AliOli</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/huevos.png"></td>
+                        <td class="precio">6,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Mejillones Rellenos</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"></td>
+                        <td class="precio dCifras">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Boquerones en Vinagre</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio dCifras">11,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensalada de remolacha</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">5,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Ensalada de zanahoria</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">5,00€</td>
+                    </tr>
+                </table>
+            </article> 
+        </div> <!-- FIN Entrantes -->
+        <div class="contenedor_pescados">
+            <article class="contenedorPlatos pescados" id="pescados">
+                <h2>Pescados</h2>
+                <table class="menu">
+                    <tr>
+                        <td class="plato">Cazón en Adobo</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Boquerones en Adobo</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Boquerones al Limón</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Boquerones Fritos</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Pijotas Fritas</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Salmonetes Fritos</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Acedías Fritas</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Huevas Fritas</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">11,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Choco Frito</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/moluscos.png"></td>
+                        <td class="precio">12,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Chipirones Fritos</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/moluscos.png"></td>
+                        <td class="precio">15,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Calamares Fritos</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">15,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Fritura de Pescado 1 pers.</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Fritura de Pescado 2 pers.</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">20,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Fritura de Pescado 3 pers.</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">30,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Fritura de pescado 4 pers.</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">40,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Sama al Rigomonti</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">16,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Gallo al Chef</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"><img class="alergeno"
+                                src="./img/alergenos/huevos.png"></td>
+                        <td class="precio">18,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Gallo a la plancha</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">15,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Gallineta</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">15,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Filetes de pez limón a la plancha</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">15,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Hurta a la Espalda</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Voraces a la Espalda</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Dorada a la Espalda</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Lubina a la Espalda</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Rodaballo a la Plancha</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Lenguados a la Plancha</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Mero a la Espalda</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Atún a la Plancha</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">15,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Filete de Gallo a la Plancha</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">15,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Filete de Sama a la Plancha</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">15,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Filete de pez Espada a la Plancha</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">15,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Brocheta de Rape</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">15,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Lomo de Bonito</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">12,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Brotola</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">15,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Merluza Frita</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Bacalao en Tomate</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">13,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Gallo Rebozado</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">15,00€</td>
+                    <tr>
+                        <td class="plato">Bacalao Rebozado</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/gluten.png"><img
+                                class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">15,00€</td>
+                    </tr>
+                    </tr>
+                </table>
+            </article>
+        </div> <!-- FIN Pescados -->
+        <div class="contenedor_mariscos">
+            <article class="contenedorPlatos mariscos" id="mariscos">
+                <h2>Mariscos</h2>
+                <table class="menu">
+                    <tr>
+                        <td class="plato">Langostinos</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Gambas a la Plancha</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Gambas Empanadas</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/huevos.png"><img
+                                class="alergeno" src="./img/alergenos/crustaceos.png"><img class="alergeno"
+                                src="./img/alergenos/gluten.png"></td>
+                        <td class="precio">14,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Gambas al Pil-Pil</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"></td>
+                        <td class="precio">11,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Gambas al ajillo</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"></td>
+                        <td class="precio">11,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Gambas Fritas</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"><img
+                                class="alergeno" src="./img/alergenos/gluten.png"></td>
+                        <td class="precio">14,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Coquinas</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"></td>
+                        <td class="precio">11,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Almejas de Carril</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"></td>
+                        <td class="precio">13,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Cañaíllas de Pinchos</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"></td>
+                        <td class="precio">12,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Conchas Finas</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"></td>
+                        <td class="precio">11,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Mejillones al Vapor</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"></td>
+                        <td class="precio">10,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Bogavantes</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Langostas</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Centollos</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Changurro</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Carabinero</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Cigalas</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"></td>
+                        <td class="precio">S/M€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Angulas</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/pescado.png"></td>
+                        <td class="precio">S/M€</td>
+                    <tr>
+                        <td class="plato">Gambas de cristal</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/crustaceos.png"></td>
+                        <td class="precio">14,00€</td>
+                    </tr>
+                    </tr>
+                </table>
+            </article>
+        </div>
+        <div class="contenedor_pulpos">
+            <article class="contenedorPlatos pulpos" id="pulpos">
+                <h2>Pulpos</h2>            
+                <table class="menu">
+                    <tr>
+                        <td class="plato">Pulpo con Mayonesa</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"><img class="alergeno"
+                                src="./img/alergenos/huevos.png"></td>
+                        <td class="precio">13,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Pulpo a la Gallega</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"></td>
+                        <td class="precio">14,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Pulpo a la Canaria</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"><img class="alergeno"
+                                src="./img/alergenos/huevos.png"><img class="alergeno" src="./img/alergenos/gluten.png"></td>
+                        <td class="precio">13,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Pulpo a la Marinera</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/moluscos.png"></td>
+                        <td class="precio">14,00€</td>
+                    </tr>
+                </table>
+            </article>
+        </div> <!-- FIN Pulpos -->
+        <div class="contenedor_carnes">
+            <article class="contenedorPlatos carnes" id="carnes">
+                <h2>Carnes</h2>
+                <table class="menu">
+                    <tr>
+                        <td class="plato">Corazones de pollo</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">8,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Pinchos de pollo</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">8,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Albóndigas con Tomate</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/huevos.png"><img class="alergeno"
+                                src="./img/alergenos/gluten.png"></td>
+                        <td class="precio">9,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Solomillo a la Plancha</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">14,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Solomillo a la Pimienta</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/lacteos.png"></td>
+                        <td class="precio">16,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Nuggets de Pollo</td>
+                        <td class="contenedorAlergenos"><img class="alergeno" src="./img/alergenos/huevos.png"><img class="alergeno"
+                                src="./img/alergenos/gluten.png"></td>
+                        <td class="precio">9,00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Kefta a la Plancha</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">8,00€</td>
+                    </tr>
+                </table>
+            </article>
+        </div> <!-- FIN Carnes -->
+        <div class="contenedor_postres">
+            <article class="contenedorPlatos postres" id="postres">
+                <h2>Postres</h2>
+                <table class="menu">
+                    <tr>
+                        <td class="plato">Fresas con nata</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">4.00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Nueces con nata y miel</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">4.00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Macedonia de Frutas Nat.</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">4.00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Flan de Huevo</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">3.00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Flan de Turrón</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">4.00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Natillas</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">3.00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Arroz con Leche</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">3.00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Yogur con Tocino de cielo</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">3.00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Piña natural</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">4.00€</td>
+                    </tr>
+                    <tr>
+                        <td class="plato">Mousse de chocolate</td>
+                        <td class="contenedorAlergenos"></td>
+                        <td class="precio">4.00€</td>
+                    </tr>
+                </table>
+            </article>
+        </div> <!-- FIN Postres -->
+    </main>
+    <footer>
+        <div class="primeraFila">
+            <img class="alergenoFooter" src="./img/alergenos/soja.png">
+            <img class="alergenoFooter" src="./img/alergenos/pescado.png">
+            <img class="alergenoFooter" src="./img/alergenos/mostaza.png">
+            <img class="alergenoFooter" src="./img/alergenos/moluscos.png">
+            <img class="alergenoFooter" src="./img/alergenos/lacteos.png">
+            <img class="alergenoFooter" src="./img/alergenos/huevos.png">
+            <img class="alergenoFooter" src="./img/alergenos/sesamo.png">
+        </div>
+        <div class="segundaFila">
+            <img class="alergenoFooter" src="./img/alergenos/gluten.png">
+            <img class="alergenoFooter" src="./img/alergenos/cascara.png">
+            <img class="alergenoFooter" src="./img/alergenos/dAzufre.png">
+            <img class="alergenoFooter" src="./img/alergenos/crustaceos.png">
+            <img class="alergenoFooter" src="./img/alergenos/cacauetes.png">
+            <img class="alergenoFooter" src="./img/alergenos/apio.png">
+            <img class="alergenoFooter" src="./img/alergenos/altramuces.png">
+        </div>
+    </footer>
+</body>
+
 </html>
