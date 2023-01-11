@@ -123,7 +123,8 @@ footer {
     margin-bottom: 10px;
     border-radius: 5px;
     z-index: 5;
-    transition: all 0.5s linear;
+    transition: all 0.5s 0.5s linear;
+    transform-origin: left;
 }
 
 .contenedor_barras .barra:nth-child(2) {
@@ -297,63 +298,41 @@ input[type="checkbox"]:checked~.menu_navegacion .nav__li:nth-child(6) {
 
 /* transicion menu hamburguesa. */
 input[type="checkbox"]:checked~.contenedor_barras :nth-child(2) {
-    transform-origin: left;
     width: 0;
     transition: all 0.3s linear;
 }
 
 input[type="checkbox"]:checked~.contenedor_barras :nth-child(1) {
-    transform-origin: left;
-    transition: all 0.6s linear;
     top: .6rem;
-    transition-delay: 0.3s;
     background-color: var(--color-uno);
 }
-
-
 
 input[type="checkbox"]:checked~.contenedor_barras :nth-child(3) {
     transform-origin: right;
     transform: rotateZ(90deg);
     right: 1.4rem;
-    transition: all 0.6s linear;
-    transition-delay: 0.3s;
     background-color: var(--color-uno);
 }
 
 input[type="checkbox"]:checked~.contenedor_barras {
-    transform-origin: center;
     transform: rotateZ(-45deg);
-    transition: all 0.5s linear;
     transition-delay: 1s;
 }
 
 input[type="checkbox"]:checked~.menu_navegacion {
-    right: 0%;
-    transition: all 0.8s linear;
+    right: 0;
 }
 
-
-
 input[type="checkbox"]~.contenedor_barras :nth-child(2) {
-    transform-origin: left;
     width: 45px;
-    transition: all 0.5s linear;
-    transition-delay: 0.5s;
 }
 
 input[type="checkbox"]~.contenedor_barras :nth-child(1) {
-    transform-origin: left;
     transform: rotateZ(0deg);
-    transition: all 0.6s linear;
-    transition-delay: 0.5s;
     top: 0;
 }
 
 input[type="checkbox"]~.contenedor_barras :nth-child(3) {
     transform-origin: right;
-    transform: rotateZ(0deg);
     right: 0;
-    transition: all 0.6s linear;
-    transition-delay: 0.5s;
 }
