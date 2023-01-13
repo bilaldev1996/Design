@@ -139,6 +139,7 @@ footer {
     height: 10vh;
     z-index: 27;
     opacity: 0;
+    cursor:pointer;
 }
 
 
