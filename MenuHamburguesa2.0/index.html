@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Fullscreen Hamburger</title>
+        <link rel="stylesheet" href="./styles.css" title="style">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Habibi&family=Lexend+Mega:wght@200;400;700&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/a5cd474084.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <main>
+            <div class="contenedor_barras">
+                <span class=""></span>
+                <span class=""></span>
+                <span class=""></span>
+            </div>
+            <div class="contenedor_principal herotext">
+                <h1>The Road Not Taken</h1>
+                <p>'The Road Not Taken' is an ambiguous poem that allows the reader to think about choices in life, whether to go with the mainstream or go it alone. If life is a journey, this poem highlights those times in life when a decision has to be made. Which way will you go?</p>
+            </div>
+            <div class="contenedor_izquierda">
+                <p>
+                    Two roads diverged in a yellow wood,<br>
+                    And sorry I could not travel both<br>
+                    And be one traveler, long I stood<br>
+                    And looked down one as far as I could<br>
+                    To where it bent in the undergrowth;<br>
+                    <br>
+                    Then took the other, as just as fair,<br>
+                    And having perhaps the better claim,<br>
+                    Because it was grassy and wanted wear;<br>
+                    Though as for that the passing there<br>
+                    Had worn them really about the same,<br>
+                    <br>
+                    And both that morning equally lay<br>
+                    In leaves no step had trodden black.<br>
+                    Oh, I kept the first for another day!<br>
+                    Yet knowing how way leads on to way,<br>
+                    I doubted if I should ever come back.<br>
+                    <br>
+                    I shall be telling this with a sigh<br>
+                    Somewhere ages and ages hence:<br>
+                    Two roads diverged in a wood, and I—<br>
+                    I took the one less traveled by,<br>
+                    And that has made all the difference.<br>
+
+                </p>
+            </div>
+            <div class="contenedor_derecha">
+                <div>
+                    <h2>The Road Not Taken</h2>
+                    <h3>By Robert Frost</h3>
+                </div>
+                    <ul class="contenedor_derecho--lista">
+                        <li><a href="https://poemanalysis.com/robert-frost/the-road-not-taken/" target="_blank">Poem Analysis</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Robert_Frost" target="_blank">Biography</a></li>
+                        <li><a href="https://en.wikiquote.org/wiki/Robert_Frost" target="_blank">Quotes</a></li>
+                        <li><a href="https://www.amazon.com/Poetry-Robert-Frost-Collected-Poems/dp/0805069860/" target="_blank">Buy His Books</a></li>
+                    </ul>
+                </div>
+        </main>
+
+    </body>
+    <script>
+        $('.contenedor_barras').on('click', function() {
+            $(this).toggleClass('icono_cruz');
+            $(".contenedor_izquierda").toggleClass(' izquierda_on');
+            $(".contenedor_derecha").toggleClass(' derecha_on');
+        });
+    </script>
+</html>
