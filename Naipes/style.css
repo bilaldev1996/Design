@@ -1,14 +1,14 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: lightslategrey;
 }
 
-.container{
+.container {
     background-color: darkslategrey;
     border: 5px solid gainsboro;
     border-radius: 10px;
@@ -19,7 +19,7 @@ body{
     margin-top: 2rem;
 }
 
-.container h1{
+.container h1 {
     color: white;
     border-bottom: 8px solid gainsboro;
     font-size: 3.5rem;
@@ -29,14 +29,17 @@ body{
     padding: 8px 0;
     font-family: 'Literata', sans-serif;
 }
-.cartas{
+
+.cartas {
     display: flex;
     flex-grow: 0;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.cartas .carta{
+.cartas .carta {
     background-color: white;
     margin: 1rem;
     width: 200px;
@@ -47,11 +50,13 @@ body{
 }
 
 /* estilo picas */
-.bi, span{
+.bi,
+span {
     color: #312f33;
     font-weight: bold;
 }
-.carta1{
+
+.carta1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,30 +64,84 @@ body{
 
 
 /* Primera carta */
-.carta1 .carta-ini{
+.carta-ini {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.carta1 .carta-medio{
+.carta-medio {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5px 0;
 }
 
-.carta-medio .bi{
+.carta-medio .bi {
     font-size: 2.5rem;
 }
 
-.carta1 .carta-fin{
+.carta-fin {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.carta-fin i, .carta-fin span{
+.carta-fin i,
+.carta-fin span {
     transform: rotate(180deg);
 }
 
-/* segunda carta */
+/* segunda y tercera carta */
+.carta2,
+.carta3,
+.carta4,
+.carta5,
+.carta6,
+.carta7,
+.carta8,
+.carta9,
+.carta10 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartas-medio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carta-fin {
+    align-self: flex-end;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+/* carta de la 4 a la 10 */
+
+.primerBloque,
+.segundoBloque {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 70px;
+}
+
+.segundoBloque {
+    align-items: flex-end;
+}
+
+.tercerBloque {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 0;
+}
+.width{
+    width: 0;
+}
