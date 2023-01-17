@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: lightslategrey;
+}
+
+.container{
+    background-color: darkslategrey;
+    border: 5px solid gainsboro;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.container h1{
+    color: white;
+    border-bottom: 8px solid gainsboro;
+    font-size: 3.5rem;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    padding: 8px 0;
+    font-family: 'Literata', sans-serif;
+}
+.cartas{
+    display: flex;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cartas .carta{
+    background-color: white;
+    margin: 1rem;
+    width: 200px;
+    height: 300px;
+    padding: .5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #00000080;
+}
+
+/* estilo picas */
+.bi, span{
+    color: #312f33;
+    font-weight: bold;
+}
+.carta1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Primera carta */
+.carta1 .carta-ini{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.carta1 .carta-medio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carta-medio .bi{
+    font-size: 2.5rem;
+}
+
+.carta1 .carta-fin{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.carta-fin i, .carta-fin span{
+    transform: rotate(180deg);
+}
+
+/* segunda carta */
