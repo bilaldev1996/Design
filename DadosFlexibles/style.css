@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Color fondo página: honeydew
+Color fondo contenedor: grey
+Color borde contenedor: darkslategrey
+ */
+ 
+ body{
+    background-color: honeydew;
+}
+
+.contendor_principal{
+    width: 65%;
+    background-color: grey;
+    margin: 0 auto;
+    margin-top: 3rem;
+    color: whitesmoke;
+    border: 5px solid darkslategrey;
+    border-radius: .6rem;
+    height: auto;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+.contendor_principal h1{
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 90%;
+    text-align: center;
+    font-size: 4rem;
+    border-bottom: 3px solid whitesmoke;
+}
+
+/* estilos cajas dados */
+.contenedor_dados{
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 0;
+    flex-wrap: wrap;
+}
+
+.contenedor_dados div:not(.divDado){
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+    margin-top: 2rem;
+    border-radius: .8rem;
+    border: 2px solid whitesmoke;
+    padding: .5rem;
+}
+
+/* estilos circulo */
+.contenedor_dados div span{
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+/* dado 1 */
+
+.contenedor_dados .dado1{
+    background-color: maroon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* dado 2 */
+    
+.contenedor_dados .dado2{
+    background-color: chocolate;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.contenedor_dados .dado2 span:nth-child(2){
+    align-self: flex-start;
+}
+
+
+/* dado 3 */
+.contenedor_dados .dado3{
+    background-color: darkorange;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.contenedor_dados .dado3 span:nth-child(2){
+    align-self: center;
+}
+
+.contenedor_dados .dado3 span:nth-child(3){
+    align-self: flex-start;
+}
+
+
+/* dado 4 */
+.contenedor_dados .dado4{
+    background-color: darkgreen;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor_dados .dado4 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* dado 5 */
+.contenedor_dados .dado5{
+    background-color: navy;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor_dados .dado5>span{
+    align-self: center;
+}
+
+.contenedor_dados .dado5 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+/* dado 6 */
+    
+.contenedor_dados div:nth-child(6){
+    background-color: indigo;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor_dados .dado6 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
