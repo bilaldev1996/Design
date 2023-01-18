@@ -8,6 +8,7 @@ body {
     background-color: lightslategrey;
 }
 
+/* contenedor principal */
 .container {
     background-color: darkslategrey;
     border: 5px solid gainsboro;
@@ -19,6 +20,7 @@ body {
     margin-top: 2rem;
 }
 
+/* titulo */
 .container h1 {
     color: white;
     border-bottom: 8px solid gainsboro;
@@ -30,6 +32,7 @@ body {
     font-family: 'Literata', sans-serif;
 }
 
+/* contenedor de las cartas */
 .cartas {
     display: flex;
     flex-grow: 0;
@@ -39,6 +42,7 @@ body {
     margin: 0 auto;
 }
 
+/* estilos comunes de todas las cartas */
 .cartas .carta {
     background-color: white;
     margin: 1rem;
@@ -49,50 +53,14 @@ body {
     box-shadow: 5px 5px 10px #00000080;
 }
 
-/* estilo picas */
+/* estilo picas y letra/numero */
 .bi,
 span {
     color: #312f33;
     font-weight: bold;
 }
 
-.carta1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-/* Primera carta */
-.carta-ini {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.carta-medio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px 0;
-}
-
-.carta-medio .bi {
-    font-size: 2.5rem;
-}
-
-.carta-fin {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.carta-fin i,
-.carta-fin span {
-    transform: rotate(180deg);
-}
-
-/* segunda y tercera carta */
+.carta1,
 .carta2,
 .carta3,
 .carta4,
@@ -106,24 +74,52 @@ span {
     justify-content: space-between;
 }
 
+/* estilos pica y numero/letra superior izquierda */
+.carta-ini {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* estilos carta central */
+.carta-medio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+.carta-medio .bi {
+    font-size: 2.5rem;
+}
+
+
+/* estilos pica y numero/letra inferior derecha */
+.carta-fin {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: flex-end;
+}
+
+.carta-fin i,
+.carta-fin span {
+    transform: rotate(180deg);
+}
+
+/* estilos cartas centrales 2 y 3 */
 .cartas-medio {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.carta-fin {
-    align-self: flex-end;
-}
-
 .rotate {
     transform: rotate(180deg);
 }
 
-/* carta de la 4 a la 10 */
 
-.primerBloque,
-.segundoBloque {
+.bloqueIzquierda,
+.bloqueDerecha {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -131,17 +127,39 @@ span {
     width: 70px;
 }
 
-.segundoBloque {
+.bloqueDerecha {
     align-items: flex-end;
 }
 
-.tercerBloque {
+.bloqueCentral {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 100%;
     width: 0;
 }
+
+.bloqueCentral>.carta-medio{
+    margin: 0 0;
+}
+
+/* propiedades para los bloques centrales */
 .width{
     width: 0;
+}
+
+/* centrar los span */
+.carta-ini>span{
+    margin-left: 3px;
+}
+
+.carta10 .carta-ini span{
+    margin-left: 0;
+}
+
+.carta-fin>span{
+    margin-right: 3px;
+}
+
+.carta10 .carta-fin span{
+    margin-right: 0;
 }
