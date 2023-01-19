@@ -155,11 +155,7 @@ span {
 .carta10 .carta-ini span{
     margin-left: 0;
 }
-
-.carta-fin>span{
-    margin-right: 3px;
-}
-
-.carta10 .carta-fin span{
-    margin-right: 0;
+/* subir las picas de la carta 7 y 9 */
+.pb{
+    padding-bottom: 40px;
 }
