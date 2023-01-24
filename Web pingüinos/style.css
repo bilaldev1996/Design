@@ -68,7 +68,7 @@ body{
 }
 
 .encabezado-imagen img{
-    width: 50%;
+    width: 30%;
 }
 
 .encabezado h1{
@@ -107,21 +107,47 @@ body{
     text-decoration: none;
     font-size: calc(1rem + 0.5vw);
     font-family: 'Merriweather', serif;
+    position: relative;
+    width: 100%;
+    padding-left: 0;
+    z-index: 1;
 }
-
 
 .menu-navegacion a:hover{
     color: var(--color-secundario);
-    background-color: whitesmoke;
-    border: 2px solid var(--color-secundario);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    padding-top: .5rem;
+}
+
+
+.menu-navegacion a:hover::after{
+    content: '';
+    display: block;
+    height: 32px;
+    position: absolute;
+    padding: 7px;
+    top:0 ;
+    width: 0;
+    z-index: -1;
+    animation: bg-color 1s forwards;
+}
+
+/* animacion enlaces */
+@keyframes bg-color {
+    0% { 
+        width: 0;
+    }
+    100%{
+        width: 100%;
+        background-color: white;
+    }
 }
 
 /* main */
 .contenedor_principal{
     display: flex;
     width: 100%;
-    margin-top: .5rem;
+    margin-top: 1rem;
     color: var(--color-secundario);
 }
 
@@ -137,6 +163,7 @@ body{
 .bloqueIzquierda h2{
     margin-left: .5rem;
 }
+
 
 .contenedor_principal h3{
     font-size: 1.1rem;
@@ -192,6 +219,8 @@ body{
     font-size: 1.1rem;
     margin-top: .5rem;
     color: black;
+    box-shadow: 0px 0px 5px var(--color-secundario);
+    scroll-margin-top: 60px;
 }
 
 
@@ -207,8 +236,8 @@ body{
 }
 
 .bloqueCentral p{
-    line-height: 1.7rem;
-    font-size: 1.3rem;
+    line-height: 1.65rem;
+    font-size: 1.33rem;
 }
 
 
