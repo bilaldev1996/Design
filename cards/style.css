@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&family=Permanent+Marker&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
@@ -5,53 +6,117 @@
 }
 
 :root{
-    
+    --color-primario:#6A040F;
+    --color-fondo-card-design:rgba(55, 6, 23,.3);
+    --color-fondo-card-front:rgba(230, 163, 7,.3);
+    --color-fondo-card-back:rgba(232, 93, 4,.3);
+    --color-terciario:#DC2F02;
+    --color-fondo-contenedor:rgba(3, 7, 30,.7);
 }
 
 body{
-    background-color: #8B52EE;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23753fd9' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.43'%3E%3Cpolygon fill='%2319030a' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%2323040f' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%232b0512' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23310515' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23370617' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .contenedor_principal{
-    background-color: rgb(90, 60, 60);
+    background-color: var(--color-fondo-contenedor);
     margin: 0 auto;
     width: 90%;
-    height: 100vh;
+    height: auto;
     text-align: center;
     padding-top: .5rem;
+    color: whitesmoke;
+    font-family: 'Oswald', sans-serif;
 }
 
+/* contenedor tarjetas */
 .cards{
     display: flex;
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: center;
-    flex-shrink: 0;
 }
 
+
+/* estilos cada tarjeta */
 .cards .card{
-    background-color: rgb(177, 113, 113);
-    margin: .5rem;
-    padding: 1rem;
-    flex-basis: 37%;
+    position: relative;
+    margin: .8rem;
+    flex-grow:1;
+    height: 450px;
+    padding-top: .2rem;
+}
+
+.bloque{
+    display: flex;
+    width: 70%;
     flex-grow: 1;
 }
 
 
-.card.card3{
-    flex-basis: 20%;
+.card1,.card2{
+    background-color: var(--color-fondo-card-front);
 }
 
-.card.card4{
-    flex-basis: 20%;
+.cards :is(.card3,.card4){
+    background-color: var(--color-fondo-card-design);
+    flex-grow: 1;
 }
 
+.card5,.card6{
+    background-color: var(--color-fondo-card-back);
+}
+
+.card :is(h1){
+    margin-bottom: .8rem;
+    color: whitesmoke;
+}
+
+.card p{
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+    margin-top: 1rem;
+    font-size: calc(1rem + .1vw);
+}
 
 .card img{
-    width: 40%;
+    width: 35%;
     margin-top: .5rem;
     border-radius: 50%;
+    margin-bottom: .5rem;
+}
+
+.cards :is(.card1,.card2) img{
+    border: 5px solid var(--color-fondo-card-front);
+}
+
+.cards :is(.card3,.card4) img{
+    margin-bottom: 2.4rem;
+    border: 5px solid var(--color-fondo-card-design);
+}
+
+.cards :is(.card5,.card6) img{
+    border: 5px solid var(--color-fondo-card-back);
+}
+
+
+/* contenedor iconos redes sociales */
+.contenedor_iconos{
+    width: 100%;
+    background-color: var(--color-primario);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    height: 60px;
+}
+
+.contenedor_iconos i{
+    font-size: 2.5rem;
 }
 
