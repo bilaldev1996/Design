@@ -21,11 +21,11 @@ body{
     background-size: cover;
 }
 
+/* estilos contenedor principal donde van las cards */
 .contenedor_principal{
     background-color: var(--color-fondo-contenedor);
     margin: 0 auto;
     width: 90%;
-    height: auto;
     text-align: center;
     padding-top: .5rem;
     color: whitesmoke;
@@ -47,23 +47,51 @@ body{
 }
 
 
+/* estilos bloque de tarjetas 2 primeras y 2 ultimas */
+.bloque{
+    display: flex;
+    flex: 1 0 70%;
+}
+
 /* estilos cada tarjeta */
 .cards .card{
     position: relative;
     margin: .8rem;
-    flex-grow:1;
-    height: 450px;
     padding-top: .2rem;
     border-radius:.5rem ;
+    width: 100%;
+    padding-bottom: 1rem;
+    transition: all .5s ease;
 }
 
-
-.bloque{
-    display: flex;
-    width: 70%;
-    flex-grow: 1;
+.card:hover{
+    background-image: linear-gradient(45deg, rgba(255,255,255,.1) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.1) 50%, rgba(255,255,255,.1) 75%, transparent 75%, transparent);
+    border-top-right-radius: 2rem;
+    border-top: 3px solid #fff;
 }
 
+.card h1{
+    transition: all .5s ease;
+}
+
+.card h1:hover{
+    transform: scale(1.1);
+}
+
+/* border-bottom del h1 con transicion */
+.card h1::after{
+    content: '';
+    width: 0%;
+    margin: 0 auto;
+    height: 2px;
+    display: block;
+    background-color: white;
+    transition: all .5s ease;
+}
+
+.card h1:hover::after{
+    width: 80%;
+}
 
 .card1,.card2{
     background-color: var(--color-fondo-card-front);
@@ -71,9 +99,8 @@ body{
 
 .cards :is(.card3,.card4){
     background-color: var(--color-fondo-card-design);
-    flex-grow: 1;
-    width: 30%;
-    flex-basis: 20%;
+    min-width: 320px;
+    flex: 1 0 25%;
 }
 
 .card5,.card6{
@@ -85,25 +112,27 @@ body{
     color: whitesmoke;
 }
 
+/* estilos párrafo */
 .card p{
     width: 70%;
     margin: 0 auto;
     text-align: justify;
     margin-top: 1rem;
-    /* TODO */
     transition: all .5s ease;
-    transform: translate(0,150px);
+    transform: translate(0,60px);
     opacity: 0;
 }
 
+/* estilos imagen */
 .card img{
-    width: 35%;
+    width: 50%;
     margin-top: .5rem;
     border-radius: 50%;
     margin-bottom: .5rem;
     transition: all .5s ease;
 }
 
+/* cuando se haga hover sobre la imagen, aparece el párrafo */
 .card img:hover ~ p{
     transition: all .5s ease;
     transform: translate(0,0);
@@ -112,19 +141,16 @@ body{
 
 .cards :is(.card1,.card2) img:hover{
     transform: translate(0,-50px);
-    
     box-shadow: var(--color-fondo-card-front) 0px 0px 10px 5px;
 }
 
 .cards :is(.card3,.card4) img:hover{
     transform: translate(0,-50px);
-    transition: all .5s ease;
     box-shadow: var(--color-fondo-card-design) 0px 0px 10px 5px;
 }
 
 .cards :is(.card5,.card6) img:hover{
     transform: translate(0,-50px);
-    transition: all .5s ease;
     box-shadow: var(--color-fondo-card-back) 0px 0px 10px 5px;
 }
 
@@ -149,9 +175,8 @@ body{
     width: 50%;
     margin: 0 auto;
     margin-top: .5rem;
-    padding: .2rem;
     font-size: 1.2rem;
-    align-items: center;
+    padding: .2rem;
 }
 
 .contenedor_iconos::before{
@@ -169,6 +194,7 @@ body{
 .contenedor_iconos:hover::before{
     transform: translate(0,100%);
     cursor: pointer;
+    background-color: #534d4d;
 }
 
 /* contenedor iconos redes sociales */
