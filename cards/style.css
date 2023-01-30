@@ -72,6 +72,8 @@ body{
 
 .card h1{
     transition: all .5s ease;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .card h1:hover{
@@ -99,7 +101,7 @@ body{
 
 .cards :is(.card3,.card4){
     background-color: var(--color-fondo-card-design);
-    min-width: 320px;
+    min-width: 400px;
     flex: 1 0 25%;
 }
 
