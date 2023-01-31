@@ -39,7 +39,7 @@ body{
 .menu-navegacion ul li a{
     color: var(--color-texto);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: .5rem;
     display: block;
     height: 100%;
@@ -47,15 +47,17 @@ body{
     transition: all .5s ease;
 }
 
+
 .menu-navegacion ul li a:hover{
     background-color: var(--color-fondo-menu-hover);
 }
 
 
 .menu-navegacion ul li:nth-last-child(1){
-    width: 16.2%;
+    width: 21.4%;
     border-right: none;
 }
+
 
 /* a todas los sections */
 main{
@@ -63,73 +65,50 @@ main{
 }
 section{
     position: absolute;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    scroll-margin-top: 6rem;
+    display: none;
 }
 
 /* section inicio */
 
 .inicio{
     background-image: url('fotos/foto1.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+    display: block;
 }
 
 
 /* section smr */
 .smr{
     background-image: url('fotos/foto2.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    display: none;
 }
 
 /* section asir */
 .asir{
     background-image: url('fotos/foto3.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    display: none;
 }
 
 /* section daw */
 .daw{
     background-image: url('fotos/foto4.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    display: none;
 }
 
 /* section dam */
 .dam{
     background-image: url('fotos/foto5.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    display: none;
 }
 
 /* section ciberseguridad */
 .ciberseguridad{
     background-image: url('fotos/foto6.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    display: none;
+}
+
+.inicio:target, .smr:target, .asir:target, .daw:target, .dam:target, .ciberseguridad:target{
+    display: block;
 }
 
 .visible{
@@ -178,7 +157,7 @@ footer{
     color: var(--color-texto);
     text-align: center;
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     position: absolute;
     bottom: 0;
     width: 100%;
