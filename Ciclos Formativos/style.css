@@ -28,34 +28,30 @@ body{
 
 
 .menu-navegacion ul li{
-    border-right: 2px solid white;
-}
-
-.menu-navegacion ul li:nth-child(1){
-    width: 40% ;
-    text-align: left;
-}
-
-.menu-navegacion ul li a{
+    border-right: 1px solid white;
     color: var(--color-texto);
-    text-decoration: none;
-    font-size: 1.5rem;
-    padding: .5rem;
-    display: block;
-    height: 100%;
-    padding: 1rem;
+    padding: .8rem 1rem;
     transition: all .5s ease;
 }
 
-
-.menu-navegacion ul li a:hover{
-    background-color: var(--color-fondo-menu-hover);
+.menu-navegacion ul li a{
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: calc(.5rem + 1vw);
 }
 
 
-.menu-navegacion ul li:nth-last-child(1){
-    width: 21.4%;
-    border-right: none;
+.menu-navegacion ul li:hover{
+    background-color: var(--color-fondo-menu-hover);
+}
+
+.menu-navegacion ul li:hover:nth-child(1){
+    background-color: var(--color-fondo-menu);
+}
+
+.menu-navegacion ul li:nth-child(1){
+    width: 38.8%;
+    text-align: left;
 }
 
 
@@ -110,11 +106,6 @@ section{
 .inicio:target, .smr:target, .asir:target, .daw:target, .dam:target, .ciberseguridad:target{
     display: block;
 }
-
-.visible{
-    display: block;
-}
-
 
 /* estilos generales para todos los articulos */
 article img{
