@@ -23,14 +23,13 @@ body{
     list-style: none;
     display: flex;
     text-align: center;
-    flex-shrink: 0;
 }
 
 
 .menu-navegacion ul li{
     border-right: 1px solid white;
     color: var(--color-texto);
-    padding: .8rem 1rem;
+    padding: .8rem 1.77rem;
     transition: all .5s ease;
 }
 
@@ -50,7 +49,7 @@ body{
 }
 
 .menu-navegacion ul li:nth-child(1){
-    width: 38.8%;
+    width: 40%;
     text-align: left;
 }
 
@@ -126,7 +125,7 @@ article{
     left: 10%;
     background-color: rgba(12, 11, 12, 0.7);
     border-radius: 1rem;
-    padding: .5rem;
+    padding: 1rem;
 }
 
 article h1{
