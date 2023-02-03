@@ -29,6 +29,7 @@ header{
 
 header h1{
     font-size: calc(2rem + 1.2vw);
+    color: rgb(87, 14, 14);
 }
 
 header p{
@@ -69,7 +70,6 @@ header p{
 .container div p:nth-child(1){
     justify-content: start;
     font-size: 1.2rem;
-    transform: translateX(-100%);
 }
 
 .container div p:nth-child(2){
@@ -77,16 +77,19 @@ header p{
     text-align: right;
     color: rgb(87, 14, 14);
     font-family: 'Kaushan Script', cursive;
-    transform: translateX(100%);
 }
 
 /* hover sobre las imágenes */
-.container div:hover p{
-    transform: translateX(0);
+.container div:hover p:nth-child(1){
+    transform: translateX(-100%);
+}
+
+.container div:hover p:nth-child(2){
+    transform: translateX(100%);
 }
 
 .container div:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 0 5px 5px rgba(153, 151, 151, 0.5);
 }
 
@@ -163,7 +166,7 @@ header p{
 }
 
 .container div:nth-child(18) p:nth-child(1){
-    height: 70px;
+    height: 65px;
 }
 
 .container div:nth-child(19){
