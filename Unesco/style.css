@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-primario: #dba018;
+    --color-secundario: #67135e;
+    --color-secundario-background:#da627d;
+    --color-fondo:#222;
+}
+
+body{
+    background-color: var(--color-fondo);
+    font-family: 'Syne', sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 2% auto;
+}
+
+.container header{
+    display: grid;
+    grid-template-columns: .3fr 3fr;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 2rem;
+}
+
+.container header img{
+    width: 100%;
+}   
+
+.container header h2{
+    color: var(--color-primario);
+    font-family: 'Fahkwang', sans-serif;
+}
+
+/* contenedor cajas */
+.container_imgs{
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.5fr;
+    grid-template-rows: repeat(3,1fr);
+    grid-auto-rows: auto;
+}
+
+.container_imgs div {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.c1{
+    background-color: var(--color-primario);
+    padding: 1.5rem;
+    display: grid;
+    justify-content: space-around;
+}
+
+.c2{
+    background-image: url('img/f1.jpg');
+}
+
+.c3{
+    background-image: url('img/f2.jpg');
+    grid-column: 3 ;
+    grid-row: 1 / 1;
+}
+
+.c4 {
+    background-image: url('img/f3.jpg');
+}
