@@ -23,10 +23,17 @@ body {
 
 .container header {
     display: grid;
-    grid-template-columns: .3fr 3fr;
+    grid-template-columns: .2fr 3fr .2fr;
     align-items: center;
     column-gap: 30px;
     margin-bottom: 1rem;
+}
+
+.container header a{
+    width: 100%;
+    display: block;
+    position: absolute;
+    height: 15%;
 }
 
 .container header img {
@@ -44,13 +51,7 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    grid-template-areas:
-        "c1 c1  c2  c2  c2  c3"
-        "c1 c1  c2  c2  c2  c4"
-        "c5 c6  c7  c7  c8  c8"
-        "c5 c6  c7  c7  c8  c8"
-        "c9 c9 c10 c11 c12 c13"
-        "c9 c9 c10 c11 c14 c14";
+
 }
 
 .container_divs div {
@@ -108,18 +109,24 @@ body {
     font-size: 2rem;
 }
 
-.container_divs p{
+.container_divs p,ul{
     line-height: 1.5rem;
     font-size: 1.1rem;
 }
 
+.container_divs ul{
+    font-weight: bold;
+    margin-left: 2rem;
+    list-style: square;
+}
+
 /* divs con información */
 .c1,.c8,.c9 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
+    display: grid;
+    justify-items: left;
+    align-content: space-around;
+    gap: 10px;
+    padding: 1.7rem 2rem;
     background-color: var(--color-primario);
     color: var(--color-secundario);
 }
@@ -144,69 +151,70 @@ body {
 }
 
 .c1 {
-    grid-area: c1;
+    grid-column-end: span 2;
+    grid-row-end: span 2;
 }
 .c2 {
     background-image: url('img/f1.jpg');
-    grid-area: c2;
+    grid-row-end: span 2;
+    grid-column-end: span 3;
 }
 
 .c3 {
     background-image: url('img/f2.jpg');
-    grid-area: c3;
 }
 
 .c4 {
     background-image: url('img/f3.jpg');
-    grid-area: c4;
 }
 
 .c5 {
     background-image: url('img/f4.jpg');
-    grid-area: c5;
+    grid-row-end: span 2;
 }
 
 .c6 {
     background-image: url('img/f5.jpg');
-    grid-area: c6;
+    grid-row-end: span 2;
 }
 
 .c7 {
     background-image: url('img/f6.jpg');
-    grid-area: c7;
+    grid-column-end: span 2;
+    grid-row-end: span 2;
 }
 
 .c8 {
-    grid-area: c8;
+    grid-column-end: span 2;
+    grid-row-end: span 2;
 }
 
 .c9 {
-    grid-area: c9;
+    grid-column-end: span 2;
+    grid-row-end: span 2;
 }
 
 .c10{
-    grid-area: c10;
     background-image: url('img/f7.jpg');
+    grid-row-end: span 2;
 }
 
 .c11 {
-    grid-area: c11;
     background-image: url('img/f8.jpg');
+    grid-row-end: span 2;
 }
 
 .c12 {
-    grid-area: c12;
     background-image: url('img/f9.jpg');
 }
 
 .c13 {
-    grid-area: c13;
     background-image: url('img/f10.jpg');
 }
 
 .c14 {
-    grid-area: c14;
     background-image: url('img/f11.jpg');
+    grid-column: 5 / span 2;
 }
 
 
