@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemons</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- incluir jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Gotta catch'em all!</h1>
+        <h2>Click on the pictures for more info</h2>
+    </header>
+    <main class="container_pokemons">
+        <div class="tarjeta pokemon1">
+            <div class="face front">
+                <img src="images/regigigas.png" alt="regigigas">
+            </div>
+            <div class="face back">
+                <div>
+                    <p>
+                        Regigigas is a Normal-type Legendary Pokémon from Generation IV. Regigigas is the master of the Legendary titans, serving as their creator. Regigigas is a skilled craftsman. It created golems out of inanimate objects and elemental energies in its image, bringing them to life. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tarjeta  pokemon2">
+            <div class="face front">
+                <img src="images/golett.png" alt="golett">
+            </div>
+            <div class="face back">
+                <div>
+                    <p>
+                        Golett is a dual-type Ground Ghost Pokémon from Generation V.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tarjeta  pokemon3">
+            <div class="face front">
+                <img src="images/wooloo.png" alt="wooloo">
+            </div>
+            <div class="face back">
+                <div>
+                    <p>
+                        Wooloo is a Normal-type Pokémon from Generation VIII. It evolves into Dubwool starting at level 24. Wooloo's fleece is extremely fluffy and can serve as a cushion.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tarjeta  pokemon4">
+            <div class="face front">
+                <img src="images/lugia.png" alt="lugia">
+            </div>
+            <div class="face back">
+                <div>
+                    <p>
+                        Lugia is a dual-type Psychic/Flying Legendary Pokémon from Generation II. Along with Ho-Oh, it is part of the tower duo. Lugia is the game mascot of Pokémon Silver and its remake Pokémon SoulSilver. It is also the trio master of the Legendary birds.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tarjeta  pokemon5">
+            <div class="face front">
+                <img src="images/totodile.png" alt="totodile">
+            </div>
+            <div class="face back">
+                <div>
+                    <p>
+                        Totodile is a Water-type Pokémon from Generation II.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tarjeta  pokemon6">
+            <div class="face front">
+                <img src="images/gengar.png" alt="gengar">
+            </div>
+            <div class="face back">
+               <div>
+                    <p>
+                        Gengar is a dual-type Ghost Poison Pokémon from Generation I. 
+                    </p>
+               </div>
+            </div>
+        </div>
+        <div class="tarjeta  pokemon7">
+            <div class="face front">
+                <img src="images/garchomp.png" alt="garchomp">
+            </div>
+            <div class="face back">
+                <div>
+                    <p>
+                        Garchomp  is a dual-type Dragon Ground Pokémon from Generation IV.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tarjeta  pokemon8">
+            <div class="face front">
+                <img src="images/electivire.png" alt="electivire">
+            </div>
+            <div class="face back">
+                <div>
+                    <p>
+                        Electivire is an Electric-type Pokémon from Generation IV.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tarjeta  pokemon9">
+            <div class="face front">
+                <img src="images/zacian.png" alt="zacian">
+            </div>
+            <div class="face back">
+                <div>
+                    <p>
+                        Zacian is a Fairy-type Legendary Pokémon from Generation VIII. While it is not known to evolve into or from any other Pokémon, Zacian has a second form activated by giving it a Rusted Sword to hold. Its original form, Hero of Many Battles, will then become the dual-type Fairy/Steel Crowned Sword.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tarjeta  pokemon10">
+            <div class="face front">
+                <img src="images/empoleon.png" alt="empoleon">
+            </div>
+            <div class="face back">
+                <div>
+                    <p>
+                        Empoleon  is a dual-type Water Steel Pokémon from Generation IV. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tarjeta  pokemon11">
+            <div class="face front">
+                <img src="images/zorua.png" alt="zorua">
+            </div>
+            <div class="face back">
+                <div>
+                    <p>
+                        Zorua is a Dark-type Pokémon introduced in Generation V.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tarjeta  pokemon12">
+            <div class="face front">
+                <img src="images/salamence.png" alt="salamence">
+            </div>
+            <div class="face back">
+                <div>
+                    <p>
+                        Salamence s a dual-type Dragon/Flying pseudo-legendary Pokémon from Generation III. Salamence can Mega Evolve into Mega Salamence using the Salamencite.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function(){
+            $('.tarjeta').click(function() {
+                $(this).toggleClass('girada');
+            });
+
+        });
+    </script>
+</body>
+</html>
