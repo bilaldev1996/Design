@@ -49,7 +49,6 @@ header h2 {
 
 .tarjeta {
     position: relative;
-    transform-style: preserve-3d;
     transition: all 0.5s linear;
 }
 
@@ -96,6 +95,14 @@ header h2 {
 }
 
 
+:is(.pokemon1, .pokemon4, .pokemon9) .front {
+    background-image: radial-gradient(rgb(211, 220, 227), rgb(45, 28, 105)80%);
+}
+
+:is(.pokemon3, .pokemon12) .back {
+    background-image: url(images/pokeball2.png);
+}
+
 /* parte frontal */
 .front {
     transform: perspective(1000px) rotateY(0deg);
@@ -107,6 +114,8 @@ header h2 {
     width: 100%;
     height: 100%;
     display: grid;
+    transition: transform 1s;
+    transform: rotateY(0);
 }
 
 
@@ -126,17 +135,13 @@ header h2 {
     border-radius: 5px;
     width: 100%;
     height: 100%;
-}
-
-:is(.pokemon1, .pokemon4, .pokemon9) .front {
-    background-image: radial-gradient(rgb(211, 220, 227), rgb(45, 28, 105)80%);
-}
-
-:is(.pokemon3, .pokemon12) .back {
-    background-image: url(images/pokeball2.png);
+    transition: transform 1s;
+    transform: rotateY(180deg);
 }
 
 
+
+/* div dentro de la parte trasera */
 .back div {
     width: 95%;
     background-color: rgba(240, 237, 231, .5);
@@ -148,8 +153,13 @@ header h2 {
     font-family: 'Pokemon Classic';
 }
 
-.girada {
+/* clase para que gire la tarjeta */
+.girada .front {
     transform: rotateY(180deg);
+}
+
+.girada .back {
+    transform: rotateY(0deg);
 }
 
 /* div del nombre */
@@ -164,15 +174,16 @@ header h2 {
     z-index: 1;
     bottom:5%;
     left: 6%;
-    height: 45px;
+    height: 5vh;
     border-radius: 5px;
     animation: shadow 1s linear infinite alternate;
     transition: all .5s linear;
 }
 
+/* div nombre animado */
 .front .nombre{
     width: 0%;
-    height: 45px;
+    height: 5vh;
     margin: 0 auto;
     background: rgb(34,101,195);
     background: linear-gradient(0deg, rgba(34,101,195,1) 0%, rgba(214,45,253,1) 100%); 
@@ -192,7 +203,7 @@ header h2 {
 }
 
 :is(.pokemon1,.pokemon4,.pokemon9) .nombre{
-    font-size: 1.5rem;
+    font-size: 1.4vw;
 }
 
 /* animacion sombra  */
@@ -224,3 +235,4 @@ header h2 {
         width: 88%;
     }
 }
+
