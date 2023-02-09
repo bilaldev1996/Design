@@ -43,7 +43,7 @@ header h2 {
     margin: 2% auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 15vw;
+    aspect-ratio:1/1;
     gap: 15px;
 }
 
