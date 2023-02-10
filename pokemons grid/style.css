@@ -14,6 +14,13 @@
     src: url("fonts/Pokemon\ Solid.ttf");
 }
 
+:root{
+    --gradiente-nombre : linear-gradient(0deg, rgba(34,101,195,1) 0%, rgba(214,45,253,1) 100%);
+    --color-fondo : rgb(190, 69, 201);
+    --gradiente-tarjetas-s:radial-gradient(rgb(190, 69, 201), rgb(54, 5, 52)80%);
+    --gradiente-tarjetas-xl:radial-gradient(rgb(211, 220, 227), rgb(45, 28, 105)80%);
+}
+
 body {
     background-image: url('images/fondo.jpg');
     background-repeat: no repeat;
@@ -38,12 +45,13 @@ header h2 {
     letter-spacing: 2px;
 }
 
-.container_pokemons {
+/* contenedor tarjetas */
+.container_tarjetas {
     width: 90%;
     margin: 2% auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    aspect-ratio:1/1;
+    grid-auto-rows: 15vw;
     gap: 15px;
 }
 
@@ -52,12 +60,14 @@ header h2 {
     transition: all 0.5s linear;
 }
 
+
 .tarjeta img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
 }
 
+/* tarjetas posicionadas */
 .pokemon1 {
     grid-column: span 2;
     grid-row: span 2;
@@ -96,7 +106,7 @@ header h2 {
 
 
 :is(.pokemon1, .pokemon4, .pokemon9) .front {
-    background-image: radial-gradient(rgb(211, 220, 227), rgb(45, 28, 105)80%);
+    background-image: var(--gradiente-tarjetas-xl);
 }
 
 :is(.pokemon3, .pokemon12) .back {
@@ -105,9 +115,9 @@ header h2 {
 
 /* parte frontal */
 .front {
-    transform: perspective(1000px) rotateY(0deg);
+    transform:rotateY(0deg);
     border-radius: 5px;
-    background-image: radial-gradient(rgb(190, 69, 201), rgb(54, 5, 52)80%);
+    background-image: var(--gradiente-tarjetas-s);
     box-shadow: 0 5px 10px #000;
     backface-visibility: hidden;
     position: absolute;
@@ -123,12 +133,11 @@ header h2 {
 /* parte trasera */
 .back {
     backface-visibility: hidden;
-    transform: perspective(1000px) rotateY(180deg);
+    transform:rotateY(180deg);
     background-image: url(images/pokeball.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -137,6 +146,7 @@ header h2 {
     height: 100%;
     transition: transform 1s;
     transform: rotateY(180deg);
+    overflow: hidden;
 }
 
 
@@ -148,7 +158,7 @@ header h2 {
     border-radius: 10px;
     padding: 1rem;
     font-size: .8vw;
-    text-align: justify;
+    text-align: center;
     font-weight: bold;
     font-family: 'Pokemon Classic';
 }
@@ -165,7 +175,7 @@ header h2 {
 /* div del nombre */
 
 .vacio{
-    background-color: rgb(212, 0, 255);
+    background-color: var(--color-fondo);
     width: 88%;
     opacity: 0;
     margin: 0 auto;
@@ -174,7 +184,7 @@ header h2 {
     z-index: 1;
     bottom:5%;
     left: 6%;
-    height: 5vh;
+    height: 12%;
     border-radius: 5px;
     animation: shadow 1s linear infinite alternate;
     transition: all .5s linear;
@@ -183,10 +193,9 @@ header h2 {
 /* div nombre animado */
 .front .nombre{
     width: 0%;
-    height: 5vh;
+    height: 12%;
     margin: 0 auto;
-    background: rgb(34,101,195);
-    background: linear-gradient(0deg, rgba(34,101,195,1) 0%, rgba(214,45,253,1) 100%); 
+    background:var(--gradiente-nombre);
     position: absolute;
     z-index: 2;
     font-size: 1vw;
@@ -200,7 +209,9 @@ header h2 {
     display: grid;
     align-items: center;
     justify-content: center;
+    text-shadow:0px 2px 5px var(--color-fondo);
 }
+
 
 :is(.pokemon1,.pokemon4,.pokemon9) .nombre{
     font-size: 1.4vw;
@@ -222,7 +233,7 @@ header h2 {
 }
 
 .tarjeta .front:hover > .nombre{   
-    animation: translate .5s .3s linear reverse forwards;
+    animation: translate .8s .5s linear reverse forwards;
 }
 
 
