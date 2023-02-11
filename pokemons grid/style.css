@@ -172,9 +172,8 @@ header h2 {
     transform: rotateY(0deg);
 }
 
-/* div del nombre */
-
-.vacio{
+.front::before{
+    content: "";
     background-color: var(--color-fondo);
     width: 88%;
     opacity: 0;
@@ -189,6 +188,8 @@ header h2 {
     animation: shadow 1s linear infinite alternate;
     transition: all .5s linear;
 }
+
+
 
 /* div nombre animado */
 .front .nombre{
@@ -228,9 +229,10 @@ header h2 {
     }
 }
 
-.tarjeta .front:hover > .vacio{   
+.tarjeta .front:hover::before{   
     opacity: 1;
 }
+
 
 .tarjeta .front:hover > .nombre{   
     animation: translate .8s .5s linear reverse forwards;
