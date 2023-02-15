@@ -71,6 +71,7 @@ body{
     width: 30%;
 }
 
+
 .encabezado h1{
     font-size: calc(1.2rem + 1vw);
     color: var(--color-secundario);
@@ -90,6 +91,7 @@ body{
     justify-content: space-around;
     list-style: none;
 }
+
 
 .menu-navegacion li{
     width: 100%;
@@ -132,6 +134,8 @@ body{
     animation: bg-color 1s forwards;
 }
 
+
+
 /* animacion enlaces */
 @keyframes bg-color {
     0% { 
@@ -143,6 +147,8 @@ body{
     }
 }
 
+
+
 /* main */
 .contenedor_principal{
     display: flex;
@@ -150,6 +156,7 @@ body{
     margin-top: 1rem;
     color: var(--color-secundario);
 }
+
 
 .contenedor_principal :is(h2,h3,h4, strong,a){
     font-family: 'Quicksand', sans-serif;
@@ -159,6 +166,8 @@ body{
 .bloqueIzquierda{
     width: 25%;
 }
+
+
 
 .bloqueIzquierda h2{
     margin-left: .5rem;
@@ -193,6 +202,9 @@ body{
     background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='30' height='51.115' patternTransform='scale(4) rotate(25)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 58%, 93%, 1)'/><path d='M14.5 6.628L8.886 3.372v-6.515L14.502-6.4l5.612 3.257-.001 6.514zm0 50.06l-5.613-3.256v-6.515l5.614-3.258 5.612 3.257-.001 6.515zm14.497-25.117l-5.612-3.257v-6.515L29 18.541l5.612 3.257-.001 6.515zm-29 0l-5.612-3.257v-6.515L0 18.541l5.612 3.257v6.515zM14.5 11.82L4.36 5.967l.002-11.706 10.14-5.855L24.638-5.74l-.001 11.707zm0 50.06L4.36 56.028l.002-11.706 10.14-5.855 10.137 5.852-.001 11.707zm14.498-25.118L18.858 30.91l.002-11.707L29 13.349l10.137 5.853-.001 11.706zm-29 0l-10.139-5.852.002-11.707L0 13.349l10.138 5.853-.002 11.706zm14.501-19.905L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z' transform='translate(0.5,0)' stroke-linecap='square' stroke-width='4' stroke='hsla(0, 25%, 87%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
 }
 
+
+
+
 /* estilos cajas pares */
 .contenedores_izq div:nth-child(2n){
     align-self: flex-end;
@@ -208,6 +220,7 @@ body{
     scroll-behavior: smooth;
 }
 
+
 .bloqueCentral div{
     width: 95%;
     border: 3px solid var(--color-secundario);
@@ -222,7 +235,6 @@ body{
     box-shadow: 0px 0px 5px var(--color-secundario);
     scroll-margin-top: 60px;
 }
-
 
 .bloqueCentral div img{
     float: left;
@@ -269,10 +281,13 @@ body{
     background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='30' height='51.115' patternTransform='scale(4) rotate(140)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(51, 38%, 83%, 1)'/><path d='M14.5 6.628L8.886 3.372v-6.515L14.502-6.4l5.612 3.257-.001 6.514zm0 50.06l-5.613-3.256v-6.515l5.614-3.258 5.612 3.257-.001 6.515zm14.497-25.117l-5.612-3.257v-6.515L29 18.541l5.612 3.257-.001 6.515zm-29 0l-5.612-3.257v-6.515L0 18.541l5.612 3.257v6.515zM14.5 11.82L4.36 5.967l.002-11.706 10.14-5.855L24.638-5.74l-.001 11.707zm0 50.06L4.36 56.028l.002-11.706 10.14-5.855 10.137 5.852-.001 11.707zm14.498-25.118L18.858 30.91l.002-11.707L29 13.349l10.137 5.853-.001 11.706zm-29 0l-10.139-5.852.002-11.707L0 13.349l10.138 5.853-.002 11.706zm14.501-19.905L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z' transform='translate(0.5,0)' stroke-linejoin='round' stroke-linecap='round' stroke-width='3' stroke='hsla(51, 56%, 88%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
 }
 
+
+
 .contenedores_der div:hover{
     transform: scale(1.03);
     filter:grayscale(.8);
 }
+
 
 .contenedores_der div img{
     width: 100%;
@@ -283,6 +298,8 @@ body{
     padding-top: 5px;
     color: #D78A76;
 }
+
+
 
 .contenedores_der div p{
     text-align: justify;
@@ -316,4 +333,90 @@ footer{
     margin-top: 1rem;
     font-size: 1.3rem;
     font-family: 'Quicksand', sans-serif;
+}
+
+@media screen and (max-width: 768px){
+
+        /* header */
+        .encabezado{
+            margin-top: 5rem;
+        }
+        
+        .encabezado-imagen{
+            width: 100%;
+        }
+        
+        .encabezado-imagen img{
+            width: 50%;
+        }
+        
+        /* menu navegacion */
+        .menu-navegacion ul{
+            flex-direction: column;
+            width: 95%;
+            margin: 0 auto;
+        }
+        
+        /* quitar hover  */
+        .menu-navegacion a:not(:focus):hover {
+            color: white;
+        }
+        
+        .menu-navegacion a{
+            padding-top: .5rem;
+            font-size: 1.8rem;
+        }
+        
+        .menu-navegacion a:hover::after{
+            animation: none;
+        }
+        
+        /* contenedor principal */
+        .contenedor_principal{
+            flex-direction: column;
+            text-align:  center;
+            align-items: center;
+        }
+        
+        /*  bloque izquierda*/
+        .bloqueIzquierda{
+            width: 95%;
+            font-size: 2rem;
+        }
+        
+        .contenedores_izq div{
+            width: 100%;
+        }
+        
+        /* bloque central */
+        .bloqueCentral{
+            width: 95%;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .bloqueCentral div{
+            width: 95%;
+            margin-top: 1rem;
+            
+        }
+        
+        /* bloque derecha */
+        .bloqueDerecha{
+            width: 90%;
+            font-size: 2rem;
+        }
+        
+        .contenedores_der div{
+            flex-basis: 100%;
+        }
+        
+        .contenedores_der div h4{
+            font-size: 2rem;
+        }
+        
+        footer p{
+            font-size: 2rem;
+        }
 }
