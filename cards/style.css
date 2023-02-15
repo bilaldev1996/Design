@@ -47,18 +47,11 @@ body {
     justify-content: center;
 }
 
-
-
-
-
 /* estilos bloque de tarjetas 2 primeras y 2 ultimas */
 .bloque {
     display: flex;
     flex: 1 0 70%;
 }
-
-
-
 
 /* estilos cada tarjeta */
 .cards .card {
@@ -73,7 +66,6 @@ body {
 
 .card:hover {
     background-image: linear-gradient(45deg, rgba(255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
-    border-top-right-radius: 2rem;
     border-top: 3px solid #fff;
 }
 
@@ -234,13 +226,17 @@ body {
     .bloque {
         display: block;
     }
+    
+    .card{
+        width: 90%;
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
+        border-top: 3px solid #fff;
+    }
 
     .bloque .card {
         margin: 0 auto;
         margin-bottom: 1rem;
-        background-image: linear-gradient(45deg, rgba(255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
-        border-top-right-radius: 2rem;
-        border-top: 3px solid #fff;
+        width: 95%;
     }
     
     .card h1{
@@ -248,9 +244,13 @@ body {
     }
     
     .card h1::after{
-        width: 100%;
+        width: 80%;
     }
 
+    .cards .card img:not(:focus):hover {
+        transform: none;
+        box-shadow: none;
+    }
 
     .contenedor_iconos i {
         font-size: 1.5rem;
