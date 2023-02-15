@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&family=Permanent+Marker&display=swap');
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-:root{
-    --color-primario:rgba(106, 4, 15);
-    --color-fondo-card-design:rgba(55, 6, 23,.3);
-    --color-fondo-card-front:rgba(230, 163, 7,.3);
-    --color-fondo-card-back:rgba(232, 93, 4,.3);
-    --color-terciario:#af7060;
-    --color-fondo-contenedor:rgba(3, 7, 30,.7);
+:root {
+    --color-primario: rgba(106, 4, 15);
+    --color-fondo-card-design: rgba(55, 6, 23, .3);
+    --color-fondo-card-front: rgba(230, 163, 7, .3);
+    --color-fondo-card-back: rgba(232, 93, 4, .3);
+    --color-terciario: #af7060;
+    --color-fondo-contenedor: rgba(3, 7, 30, .7);
 }
 
-body{
+body {
     background-color: #000000;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.43'%3E%3Cpolygon fill='%2319030a' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%2323040f' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%232b0512' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23310515' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23370617' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
@@ -22,7 +23,7 @@ body{
 }
 
 /* estilos contenedor principal donde van las cards */
-.contenedor_principal{
+.contenedor_principal {
     background-color: var(--color-fondo-contenedor);
     margin: 0 auto;
     width: 90%;
@@ -32,13 +33,13 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
-.contenedor_principal>h1{
+.contenedor_principal>h1 {
     font-size: 3rem;
     margin-bottom: 2rem;
 }
 
 /* contenedor tarjetas */
-.cards{
+.cards {
     display: flex;
     width: 95%;
     margin: 0 auto;
@@ -47,41 +48,47 @@ body{
 }
 
 
+
+
+
 /* estilos bloque de tarjetas 2 primeras y 2 ultimas */
-.bloque{
+.bloque {
     display: flex;
     flex: 1 0 70%;
 }
 
+
+
+
 /* estilos cada tarjeta */
-.cards .card{
+.cards .card {
     position: relative;
     margin: .8rem;
     padding-top: .2rem;
-    border-radius:.5rem ;
+    border-radius: .5rem;
     width: 100%;
     padding-bottom: 1rem;
     transition: all .5s ease;
 }
 
-.card:hover{
-    background-image: linear-gradient(45deg, rgba(255,255,255,.1) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.1) 50%, rgba(255,255,255,.1) 75%, transparent 75%, transparent);
+.card:hover {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
     border-top-right-radius: 2rem;
     border-top: 3px solid #fff;
 }
 
-.card h1{
+.card h1 {
     transition: all .5s ease;
     width: 70%;
     margin: 0 auto;
 }
 
-.card h1:hover{
+.card h1:hover {
     transform: scale(1.1);
 }
 
 /* border-bottom del h1 con transicion */
-.card h1::after{
+.card h1::after {
     content: '';
     width: 0%;
     margin: 0 auto;
@@ -91,42 +98,44 @@ body{
     transition: all .5s ease;
 }
 
-.card h1:hover::after{
+.card h1:hover::after {
     width: 80%;
 }
 
-.card1,.card2{
+.card1,
+.card2 {
     background-color: var(--color-fondo-card-front);
 }
 
-.cards :is(.card3,.card4){
+.cards :is(.card3, .card4) {
     background-color: var(--color-fondo-card-design);
     min-width: 400px;
     flex: 1 0 25%;
 }
 
-.card5,.card6{
+.card5,
+.card6 {
     background-color: var(--color-fondo-card-back);
 }
 
-.card :is(h1){
+.card :is(h1) {
     margin-bottom: .8rem;
     color: whitesmoke;
 }
 
 /* estilos párrafo */
-.card p{
+.card p {
     width: 70%;
     margin: 0 auto;
     text-align: justify;
     margin-top: 1rem;
     transition: all .5s ease;
-    transform: translate(0,60px);
+    transform: translate(0, 60px);
     opacity: 0;
 }
 
 /* estilos imagen */
-.card img{
+.card img {
     width: 50%;
     margin-top: .5rem;
     border-radius: 50%;
@@ -135,37 +144,37 @@ body{
 }
 
 /* cuando se haga hover sobre la imagen, aparece el párrafo */
-.card img:hover ~ p{
+.card img:hover~p {
     transition: all .5s ease;
-    transform: translate(0,0);
+    transform: translate(0, 0);
     opacity: 1;
 }
 
-.cards :is(.card1,.card2) img:hover{
-    transform: translate(0,-50px);
+.cards :is(.card1, .card2) img:hover {
+    transform: translate(0, -50px);
     box-shadow: var(--color-fondo-card-front) 0px 0px 10px 5px;
 }
 
-.cards :is(.card3,.card4) img:hover{
-    transform: translate(0,-50px);
+.cards :is(.card3, .card4) img:hover {
+    transform: translate(0, -50px);
     box-shadow: var(--color-fondo-card-design) 0px 0px 10px 5px;
 }
 
-.cards :is(.card5,.card6) img:hover{
-    transform: translate(0,-50px);
+.cards :is(.card5, .card6) img:hover {
+    transform: translate(0, -50px);
     box-shadow: var(--color-fondo-card-back) 0px 0px 10px 5px;
 }
 
-.cards :is(.card1,.card2) img{
+.cards :is(.card1, .card2) img {
     border: 5px solid var(--color-fondo-card-front);
 }
 
-.cards :is(.card3,.card4) img{
+.cards :is(.card3, .card4) img {
     margin-bottom: 2.4rem;
     border: 5px solid var(--color-fondo-card-design);
 }
 
-.cards :is(.card5,.card6) img{
+.cards :is(.card5, .card6) img {
     border: 5px solid var(--color-fondo-card-back);
 }
 
@@ -181,7 +190,7 @@ body{
     padding: .2rem;
 }
 
-.contenedor_iconos::before{
+.contenedor_iconos::before {
     content: 'Contact Me';
     position: absolute;
     top: 0;
@@ -190,29 +199,76 @@ body{
     height: 100%;
     background-color: #221d1d;
     border-radius: .8rem;
-    transition: all .5s  ease;
+    transition: all .5s ease;
 }
 
-.contenedor_iconos:hover::before{
-    transform: translate(0,100%);
+.contenedor_iconos:hover::before {
+    transform: translate(0, 100%);
     cursor: pointer;
     background-color: #534d4d;
 }
 
 /* contenedor iconos redes sociales */
-.contenedor_iconos{
+.contenedor_iconos {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
 }
 
-.contenedor_iconos i{
+.contenedor_iconos i {
     font-size: calc(.7rem + .5vw);
-    transition: all .3s  ease;
+    transition: all .3s ease;
 }
 
-.contenedor_iconos i:hover{
+.contenedor_iconos i:hover {
     color: var(--color-primario);
     transform: scale(1.4);
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor_principal>h1 {
+        font-size: 2.5rem;
+    }
+
+    .bloque {
+        display: block;
+    }
+
+    .bloque .card {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
+        border-top-right-radius: 2rem;
+        border-top: 3px solid #fff;
+    }
+    
+    .card h1{
+        transform: scale(1.1);
+    }
+    
+    .card h1::after{
+        width: 100%;
+    }
+
+
+    .contenedor_iconos i {
+        font-size: 1.5rem;
+        color: var(--color-primario);
+        transform: scale(1.4);
+    }
+
+    .contenedor_iconos::before {
+        padding-top: .5rem;
+    }
+    
+    .card p{
+        transform: none;
+        opacity: 1;
+    }
+    
+    .contenedor_iconos::before{
+        display: none;
+    }
+    
 }
