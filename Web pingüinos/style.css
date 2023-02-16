@@ -335,36 +335,55 @@ footer{
     font-family: 'Quicksand', sans-serif;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width:992px){
+    /* header */
+    .encabezado{
+        margin-top: 5rem;
+    }
+    
+    .encabezado-imagen{
+        width: 30%;
+    }
+    
+    .encabezado-imagen img{
+        width: 80%;
+    }
+    
+    /* menu navegacion */
+    .menu-navegacion ul{
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .menu-navegacion a{
+        padding-top: .5rem;
+        font-size: 1.8rem;
+    }
+    
+    /*  bloque izquierda*/
+    .bloqueIzquierda{
+        width: 25%;
+    }
+    
+    .contenedores_izq div{
+        width: 100%;
+    }
+    
+    footer p{
+        font-size: 2rem;
+    }
+}
 
-        /* header */
-        .encabezado{
-            margin-top: 5rem;
-        }
+@media screen and (max-width: 768px){        
         
-        .encabezado-imagen{
-            width: 100%;
-        }
-        
-        .encabezado-imagen img{
-            width: 50%;
-        }
-        
-        /* menu navegacion */
-        .menu-navegacion ul{
-            flex-direction: column;
-            width: 95%;
-            margin: 0 auto;
+        .barra-fija a{
+            color: var(--color-terciario);
         }
         
         /* quitar hover  */
         .menu-navegacion a:not(:focus):hover {
             color: white;
-        }
-        
-        .menu-navegacion a{
-            padding-top: .5rem;
-            font-size: 1.8rem;
         }
         
         .menu-navegacion a:hover::after{
@@ -380,12 +399,13 @@ footer{
         
         /*  bloque izquierda*/
         .bloqueIzquierda{
-            width: 95%;
+            width: 100%;
             font-size: 2rem;
+            order: 3;
         }
         
         .contenedores_izq div{
-            width: 100%;
+            width: 90%;
         }
         
         /* bloque central */
@@ -416,7 +436,19 @@ footer{
             font-size: 2rem;
         }
         
-        footer p{
-            font-size: 2rem;
+        .contenedores_der div{
+            transform: scale(1.03);
+            margin-bottom: 1.5rem;
         }
+        
+        .contenedores_der div:hover{
+            filter: none;
+        }
+        
+        .contenedores_der div a{
+            color: whitesmoke;
+            background-color: var(--color-terciario);
+        }
+        
+        
 }
