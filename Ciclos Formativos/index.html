@@ -78,7 +78,23 @@
         $('.contenedor_barras').on('click', function() {
             $(this).toggleClass('icono_cruz');
             $(".menu-navegacion").toggleClass('menu_visible');
+            $('nav').removeClass('menu_oculto');
         });
+        
+        
+        $('nav').on('click',function(){
+            $(this).addClass('menu_oculto');
+            $(".menu-navegacion").removeClass('menu_visible');
+            $('.contenedor_barras').removeClass('icono_cruz');
+        });
+        
+        $('section').on('click',function(){
+            $(this).toggleClass('menu_oculto');
+            $(".menu-navegacion").removeClass('menu_visible');
+            $('.contenedor_barras').removeClass('icono_cruz');
+        });
+        
+
     </script>
 </body>
 </html>
