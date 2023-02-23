@@ -16,7 +16,7 @@ body {
 }
 
 /* ocultar menu hamburguesa */
-.contenedor_barras{
+.contenedor_barras {
     display: none !important;
 }
 
@@ -165,43 +165,46 @@ footer {
 
 
 /*barras menú hamburguesa*/
-span{ 
+.contenedor_barras span {
     display: block;
     width: 40px;
     height: 5px;
     margin-bottom: 8px;
     background: white;
-    border-radius: 3px; 
+    border-radius: 3px;
     position: relative;
     transition: all .3s linear;
 }
 
 /* transiciones y transformaciones barras */
-.icono_cruz span:nth-child(1){
+.icono_cruz span:nth-child(1) {
     transform: rotate(45deg);
-    top: 13px;
+    transform-origin: left;
+    top: -2px;
 }
 
-.icono_cruz span:nth-child(2){
+.icono_cruz span:nth-child(2) {
     background-color: white;
     opacity: 0;
 }
 
-.icono_cruz span:nth-child(3){
+.icono_cruz span:nth-child(3) {
     background-color: white;
     transform: rotate(-45deg);
-    bottom: 12px;
+    transform-origin: left;
 }
 
 
 @media screen and (max-width: 768px) {
-   .menu-navegacion{
+
+    /* ocultamos el menú de navegación */
+    .menu-navegacion {
         position: absolute;
         width: 100%;
-        top: -50%;
+        top: -60%;
         z-index: 1;
         transition: all .5s linear;
-   }
+    }
 
     .menu-navegacion ul {
         flex-direction: column;
@@ -210,13 +213,19 @@ span{
     .menu-navegacion ul li {
         border: none;
         width: 100%;
+        padding: 0;
     }
-    
-    .menu-navegacion ul li a{
+
+    .menu-navegacion ul li:hover {
+        background-color: var(--color-fondo-menu);
+    }
+
+    .menu-navegacion ul li a {
         width: 100%;
         display: block;
+        padding: .8rem 1.77rem;
     }
-    
+
     .menu-navegacion ul li a {
         font-size: 1.8rem;
     }
@@ -227,45 +236,43 @@ span{
         width: 100%;
         border-top: 2px solid white;
     }
-    
-    #inicio span{
+
+    #inicio span {
         display: none;
     }
-    
+
 
     #inicio:before {
         content: "Volver a la portada";
         display: inline-block;
     }
-    
+
     /*contenedor de las barras del menú hamburguesa*/
-    .contenedor_barras{
-        display:block !important;
-        cursor:pointer;  
-        position:absolute;
+    .contenedor_barras {
+        display: block !important;
+        cursor: pointer;
+        position: absolute;
         right: 2%;
         top: 5%;
         z-index: 5;
     }
-    
-    article{
+
+    article {
         height: 570px;
         margin-top: 5rem;
     }
 
-    article img{
+    article img {
         width: 60%;
     }
-    
-    .menu_visible{
+
+    .menu_visible {
         top: 0%;
     }
-    
-    .menu_oculto{
-        top: -50%;
+
+    .menu_oculto {
+        top: -100%;
     }
 
 
 }
-
-
