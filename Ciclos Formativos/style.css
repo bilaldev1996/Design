@@ -1,64 +1,69 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --color-texto: #f5f5f5;
     --color-fondo-menu: #5e1357;
     --color-fondo-menu-hover: #854a8d;
 }
 
-body{
+body {
     font-family: 'Electrolize', sans-serif;
     overflow: hidden;
 }
 
-.menu-navegacion{
+/* ocultar menu hamburguesa */
+.contenedor_barras{
+    display: none !important;
+}
+
+.menu-navegacion {
     background-color: var(--color-fondo-menu);
 }
 
-.menu-navegacion ul{
+.menu-navegacion ul {
     list-style: none;
     display: flex;
     text-align: center;
 }
 
-
-.menu-navegacion ul li{
+.menu-navegacion ul li {
     border-right: 1px solid white;
     color: var(--color-texto);
     padding: .8rem 1.77rem;
     transition: all .5s ease;
 }
 
-.menu-navegacion ul li a{
+.menu-navegacion ul li a {
     text-decoration: none;
     color: var(--color-texto);
     font-size: calc(.5rem + 1vw);
 }
 
 
-.menu-navegacion ul li:hover{
+.menu-navegacion ul li:hover {
     background-color: var(--color-fondo-menu-hover);
 }
 
-.menu-navegacion ul li:hover:nth-child(1){
+.menu-navegacion ul li:hover:nth-child(1) {
     background-color: var(--color-fondo-menu);
 }
 
-.menu-navegacion ul li:nth-child(1){
+.menu-navegacion ul li:nth-child(1) {
     width: 40%;
     text-align: left;
 }
 
 
 /* a todas los sections */
-main{
+main {
     position: relative;
 }
-section{
+
+section {
     position: absolute;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -71,49 +76,54 @@ section{
 
 /* section inicio */
 
-.inicio{
+.inicio {
     background-image: url('fotos/foto1.jpg');
     display: block;
 }
 
 
 /* section smr */
-.smr{
+.smr {
     background-image: url('fotos/foto2.jpg');
 }
 
 /* section asir */
-.asir{
+.asir {
     background-image: url('fotos/foto3.jpg');
 }
 
 /* section daw */
-.daw{
+.daw {
     background-image: url('fotos/foto4.jpg');
 }
 
 /* section dam */
-.dam{
+.dam {
     background-image: url('fotos/foto5.jpg');
 }
 
 /* section ciberseguridad */
-.ciberseguridad{
+.ciberseguridad {
     background-image: url('fotos/foto6.jpg');
 }
 
-.inicio:target, .smr:target, .asir:target, .daw:target, .dam:target, .ciberseguridad:target{
+.inicio:target,
+.smr:target,
+.asir:target,
+.daw:target,
+.dam:target,
+.ciberseguridad:target {
     display: block;
 }
 
 /* estilos generales para todos los articulos */
-article img{
+article img {
     width: 40%;
     border-radius: .5rem;
     margin: 1rem 0;
 }
 
-article{
+article {
     width: 80%;
     height: 75%;
     color: var(--color-texto);
@@ -128,13 +138,13 @@ article{
     padding: 1rem;
 }
 
-article h1{
+article h1 {
     font-size: 2rem;
     text-align: center;
     margin-bottom: .5rem;
 }
 
-article p{
+article p {
     font-size: 1.2rem;
     text-align: justify;
     margin-top: .5rem;
@@ -142,7 +152,7 @@ article p{
 
 
 
-footer{
+footer {
     background-color: var(--color-fondo-menu);
     color: var(--color-texto);
     text-align: center;
@@ -151,4 +161,86 @@ footer{
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+   /* TODO: */
+   .menu-navegacion{
+    position: absolute;
+   }
+
+    .menu-navegacion ul {
+        flex-direction: column;
+    }
+
+    .menu-navegacion ul li {
+        border: none;
+    }
+    
+    .menu-navegacion ul li a {
+        font-size: 1.8rem;
+    }
+
+    .menu-navegacion ul li:nth-child(1) {
+        order: 2;
+        text-align: center;
+        width: 100%;
+        border-top: 3px solid white;
+    }
+    
+    #inicio span{
+        display: none;
+    }
+    
+
+    #inicio:before {
+        content: "Volver a la portada";
+        display: inline-block;
+        width: 100%;
+    }
+    
+    /*contenedor de las barras del menú hamburguesa*/
+    .contenedor_barras{
+        display:block !important;
+        cursor:pointer;  
+        position:absolute;
+        right: 2%;
+        top: 5%;
+        z-index: 5;
+    }
+}
+
+
+
+/*barras menú hamburguesa*/
+span{ 
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 8px;
+    background: white;
+    border-radius: 3px; 
+    position: relative;
+    transition: all .3s linear;
+}
+
+/* transiciones y transformaciones barras */
+.icono_cruz span:nth-child(1){
+    transform: rotate(45deg);
+    top: 13px;
+}
+
+.icono_cruz span:nth-child(2){
+    background-color: white;
+    opacity: 0;
+}
+
+.icono_cruz span:nth-child(3){
+    background-color: white;
+    transform: rotate(-45deg);
+    bottom: 12px;
+}
+
+.menu_visible{
+    transform: translate(-100%);
 }
