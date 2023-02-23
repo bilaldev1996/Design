@@ -19,6 +19,8 @@
     --color-fondo : rgb(190, 69, 201);
     --gradiente-tarjetas-s:radial-gradient(rgb(190, 69, 201), rgb(54, 5, 52)80%);
     --gradiente-tarjetas-xl:radial-gradient(rgb(211, 220, 227), rgb(45, 28, 105)80%);
+    --gradiente-tarjetas-mobile1:radial-gradient(rgb(211, 220, 227), rgb(105, 97, 28)80%);
+    --gradiente-tarjetas-mobile2:radial-gradient(rgb(211, 220, 227), rgb(105, 47, 28)80%);
 }
 
 body {
@@ -125,7 +127,7 @@ header h2 {
     height: 100%;
     display: grid;
     transition: transform 1s;
-    transform: rotateY(0);
+    transform: rotateY(0deg);
 }
 
 
@@ -145,7 +147,6 @@ header h2 {
     width: 100%;
     height: 100%;
     transition: transform 1s;
-    transform: rotateY(180deg);
     overflow: hidden;
 }
 
@@ -249,3 +250,68 @@ header h2 {
     }
 }
 
+@media screen and (max-width: 800px) {
+    
+    header {
+        font-size: 1rem;
+        width: 90%;
+        margin: 2% auto;
+    }
+
+    .container_tarjetas{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12,1fr);
+    }
+    
+    .tarjeta{
+        grid-area: auto;
+        aspect-ratio: 1/1;
+    }
+    
+    .front{
+        background-image: var(--gradiente-tarjetas-mobile2);
+        
+    }
+    
+    .front .nombre{
+        width: 88% ;
+        animation: none;
+        font-size: 2.1rem;
+    }
+    
+    .front::before{
+        box-shadow: 0 0 5px 2px white;
+        opacity: 1;
+        animation: none;
+    }
+    
+    .tarjeta .front:hover > .nombre{   
+        animation:none;
+    }
+    
+    :is(.pokemon1, .pokemon4, .pokemon9) .front {
+        background-image: var(--gradiente-tarjetas-mobile1);
+    }
+    
+    :is(.pokemon3, .pokemon12) .back {
+        background-image: url(images/pokeball2.png);
+    }
+    
+    .back div{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    :is(.pokemon1, .pokemon4, .pokemon9) .front {
+        background-image: var(--gradiente-tarjetas-xl);
+    }
+    .front{
+        background-image: var(--gradiente-tarjetas-s);
+    }
+    
+    .back div{
+        font-size: 1.2rem;
+    }
+}
