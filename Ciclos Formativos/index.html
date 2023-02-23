@@ -9,11 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <script src="https://kit.fontawesome.com/a5cd474084.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+    <div class="contenedor_barras">
+        <span class=""></span>
+        <span class=""></span>
+        <span class=""></span>
+    </div>
     <nav class="menu-navegacion">
         <ul>
-            <li><a href="#ini" id="inicio">Inicio</a></li>
+            <li><a href="#ini" id="inicio"><span>Inicio</span></a></li>
             <li><a href="#sm" id="smr">SMR</a></li>
             <li><a href="#as" id="asir">ASIR</a></li>
             <li><a href="#dw" id="daw">Desarrollo Web</a></li>
@@ -66,5 +74,11 @@
         </section>
     </main>
     <footer>Diseño de Interfaces Web - 2DAW. Ceuta.</footer>
+    <script>
+        $('.contenedor_barras').on('click', function() {
+            $(this).toggleClass('icono_cruz');
+            $(".menu-navegacion").toggleClass('menu_visible');
+        });
+    </script>
 </body>
 </html>
