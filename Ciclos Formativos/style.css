@@ -163,54 +163,6 @@ footer {
     width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-   /* TODO: */
-   .menu-navegacion{
-    position: absolute;
-   }
-
-    .menu-navegacion ul {
-        flex-direction: column;
-    }
-
-    .menu-navegacion ul li {
-        border: none;
-    }
-    
-    .menu-navegacion ul li a {
-        font-size: 1.8rem;
-    }
-
-    .menu-navegacion ul li:nth-child(1) {
-        order: 2;
-        text-align: center;
-        width: 100%;
-        border-top: 3px solid white;
-    }
-    
-    #inicio span{
-        display: none;
-    }
-    
-
-    #inicio:before {
-        content: "Volver a la portada";
-        display: inline-block;
-        width: 100%;
-    }
-    
-    /*contenedor de las barras del menú hamburguesa*/
-    .contenedor_barras{
-        display:block !important;
-        cursor:pointer;  
-        position:absolute;
-        right: 2%;
-        top: 5%;
-        z-index: 5;
-    }
-}
-
-
 
 /*barras menú hamburguesa*/
 span{ 
@@ -241,6 +193,79 @@ span{
     bottom: 12px;
 }
 
-.menu_visible{
-    transform: translate(-100%);
+
+@media screen and (max-width: 768px) {
+   .menu-navegacion{
+        position: absolute;
+        width: 100%;
+        top: -50%;
+        z-index: 1;
+        transition: all .5s linear;
+   }
+
+    .menu-navegacion ul {
+        flex-direction: column;
+    }
+
+    .menu-navegacion ul li {
+        border: none;
+        width: 100%;
+    }
+    
+    .menu-navegacion ul li a{
+        width: 100%;
+        display: block;
+    }
+    
+    .menu-navegacion ul li a {
+        font-size: 1.8rem;
+    }
+
+    .menu-navegacion ul li:nth-child(1) {
+        order: 2;
+        text-align: center;
+        width: 100%;
+        border-top: 2px solid white;
+    }
+    
+    #inicio span{
+        display: none;
+    }
+    
+
+    #inicio:before {
+        content: "Volver a la portada";
+        display: inline-block;
+    }
+    
+    /*contenedor de las barras del menú hamburguesa*/
+    .contenedor_barras{
+        display:block !important;
+        cursor:pointer;  
+        position:absolute;
+        right: 2%;
+        top: 5%;
+        z-index: 5;
+    }
+    
+    article{
+        height: 570px;
+        margin-top: 5rem;
+    }
+
+    article img{
+        width: 60%;
+    }
+    
+    .menu_visible{
+        top: 0%;
+    }
+    
+    .menu_oculto{
+        top: -50%;
+    }
+
+
 }
+
+
