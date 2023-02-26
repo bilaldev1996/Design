@@ -1,0 +1,485 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+
+:root {
+    --color-primario: rgba(1, 10, 41, 255);
+    --color-secundario: rgba(246, 0, 107, 255);
+    --color-secundario-opacity: rgba(246, 0, 107, .6);
+    --color-terciario: #01031a;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #010a29;
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23f6006b' fill-opacity='0.29'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+/* todos los h1 y h2 */
+h1,
+h2 {
+    margin-bottom: 1rem;
+    color: var(--color-secundario);
+    text-align: center;
+}
+
+/* texto especial */
+span {
+    color: var(--color-secundario);
+    text-transform: capitalize;
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* todas las imagenes del sitio */
+img {
+    width: 80%;
+    height: auto;
+}
+
+
+
+/* enlaces Read more */
+.info {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: var(--color-secundario-opacity);
+    width: 110px;
+    padding: .2rem;
+    margin-top: .5rem;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 1rem;
+    position: absolute;
+}
+
+/* div que contiene logo y menu hamburguesa */
+.logo_burguer {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    position: absolute;
+}
+
+
+/*contenedor de las barras del menú hamburguesa*/
+.contenedor_barras {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    z-index: 6;
+    transition: all .5s linear;
+    align-self: end;
+}
+
+
+/*barras menú hamburguesa*/
+.contenedor_barras span {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 8px;
+    background: white;
+    position: relative;
+    transition: all .3s linear;
+}
+
+
+/* menu navegacion */
+.menu_navegacion {
+    background-color: var(--color-primario);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 1.5rem;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    transform: scale(0);
+    transition: all .5s ease;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.menu_navegacion .nav-links {
+    opacity: 0;
+}
+
+.nav-links li:nth-child(1) {
+    display: none;
+}
+
+.menu_navegacion li:nth-child(1) img {
+    width: 10%;
+    border-radius: 50%;
+}
+
+.menu_navegacion li {
+    list-style: none;
+    padding: .5rem;
+}
+
+
+.menu_navegacion a {
+    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* transiciones y transformaciones barras */
+.icono_cruz span:nth-child(1) {
+    transform: rotate(-360deg) rotate(-27deg);
+    transform-origin: right;
+    top: -2px;
+    width: 30px;
+    right: 3px;
+    border-top-left-radius: 100px;
+}
+
+.icono_cruz span:nth-child(2) {
+    z-index: -1;
+    right: -2px;
+    top: -1px;
+}
+
+.icono_cruz span:nth-child(3) {
+    transform: rotate(360deg) rotate(27deg);
+    transform-origin: right;
+    width: 30px;
+    right: 3px;
+    border-bottom-left-radius: 100px;
+}
+
+header {
+    padding: 1rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+header h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+header h1 {
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 15ch;
+    /* número de letras del título */
+    margin: 0 auto;
+    /* funcion steps para que la animacion coincida con cada letra */
+    animation: animacion1 2s steps(15), animacion2 .5s infinite;
+    overflow: hidden;
+    padding: 1rem;
+    /* para que el border vuelva a su estado inicial */
+    animation-fill-mode: forwards;
+}
+
+
+/* animacion efecto maquina de escribir */
+@keyframes animacion1 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 15ch;
+        border-right-width: 0;
+    }
+}
+
+@keyframes animacion2 {
+    50% {
+        border-color: transparent
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header,
+section {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+    text-align: left;
+    padding-top: 10rem;
+}
+
+section {
+    padding-top: 0;
+    position: relative;
+}
+
+section {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--color-primario);
+}
+
+section h2 {
+    order: 2;
+    padding-top: 1rem;
+    background: linear-gradient(white, var(--color-secundario));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section p {
+    order: 3;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+section img {
+    order: 1;
+    width: 100%;
+    height: 370px;
+}
+
+section .info {
+    order: 4;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* boton volver hacia arriba */
+.ir_arriba {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-size: 3rem;
+}
+
+/* pie de pagina */
+footer {
+    background-color: var(--color-terciario);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* clases que se añaden con jquery */
+/* quitar scroll */
+.no_scroll {
+    overflow: hidden;
+}
+
+/* mostrar boton para ir arriba */
+.mostrar {
+    display: block;
+}
+
+/* mostrar menu navegacion */
+.abrir {
+    transform: scale(1);
+    border-radius: 0%;
+}
+
+/* mostrar enlaces menu */
+.abrir .nav-links {
+    opacity: 1;
+    transition: all .5s .3s linear;
+}
+
+
+/*breakpoint para tablets */
+@media screen and (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    section {
+        width: 100%;
+    }
+}
+
+
+/*breakpoint para desktop */
+@media screen and (min-width: 992px) {
+
+    .logo {
+        display: none;
+    }
+
+    .logo_burguer {
+        display: none;
+    }
+
+    .nav-links li:nth-child(1) {
+        display: block;
+    }
+
+    .contenedor_barras {
+        display: none;
+    }
+
+    .menu_navegacion {
+        position: fixed;
+        transform: translate(0);
+        align-items: center;
+        height: 100px;
+        top: 0;
+        left: 0;
+        border-radius: 0%;
+        background-color: transparent;
+    }
+
+    .menu_navegacion .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        align-items: center;
+        opacity: 1;
+    }
+
+    .menu_navegacion li:nth-child(1) {
+        width: 20%;
+        text-align: center;
+    }
+
+    .menu_navegacion li:nth-child(1) img {
+        width: 20%;
+    }
+
+    .menu_navegacion li a {
+        text-decoration: none;
+        transition: all .3s;
+    }
+
+    /* subrayado animado */
+    .menu_navegacion li a::after {
+        content: '';
+        width: 0;
+        display: block;
+        height: 2px;
+        background: white;
+        transition: all .3s ease;
+    }
+
+    .menu_navegacion li a:hover::after {
+        width: 100%;
+    }
+
+    /* cambiar color del menu navegacion con jquery al hacer scroll */
+    .change_bg_color {
+        background-color: var(--color-primario);
+    }
+
+    .change_bg_color a {
+        color: var(--color-secundario);
+    }
+
+    header {
+        width: 90%;
+        padding-top: 7rem;
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    header h3 {
+        font-size: 1.7rem;
+        margin-top: .5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+
+    header .info {
+        border-radius: 5px;
+        transition: all .3s ease;
+    }
+
+    header .info:hover {
+        background-color: var(--color-secundario);
+    }
+
+    main {
+        padding: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    section {
+        position: relative;
+        transition: all .3s ease;
+        border: 5px solid #ccc;
+    }
+
+    section:hover {
+        border-style: dashed;
+        border-color: var(--color-secundario);
+        transform: scale(1.05);
+    }
+
+
+    section p {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+
+    section .info {
+        font-size: 1.2rem;
+        align-self: center;
+    }
+
+
+    /* al hacer hover cambia el tamaño y con cli-path se convierte en flecha */
+    section .info:hover {
+        width: 50%;
+        transition: all .3s ease;
+        -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    }
+
+    footer {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+}
