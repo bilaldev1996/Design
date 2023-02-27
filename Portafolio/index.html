@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="styles.css" />
 
         <!-- favicoon -->
-        <link rel="icon" href="images/favicon.png" />
+        <link rel="icon" href="images/logo.png" />
         <!-- importar jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -260,13 +260,15 @@
             </a>
         </footer>
         <script>
+            
+            /* mostrar menu navegacion + animacion boton hamburguesa */
             $('.contenedor_barras').on('click', function () {
                 $(this).toggleClass('icono_cruz');
                 $('.menu_navegacion').toggleClass('abrir');
                 $('body').toggleClass('no_scroll');
             });
 
-            /* si se empieza a bajar con el scroll */
+            /* si se empieza a bajar con el scroll , cambia el color del menu de navgeacion y muestra el boton de volver arriba */
             $(window).on('scroll', function () {
                 if ($(window).scrollTop() > 5) {
                     $('.menu_navegacion').addClass('change_bg_color');
